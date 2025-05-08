@@ -1,1 +1,19 @@
 @import "tailwindcss";
+
+* {
+  font-family: "Averia Serif Libre", serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  color: #f4f4f4;
+  /* border-color: #fafafa; */
+}
+
+.text-heading {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+}
+
+body {
+  background-color: #070707;
+  @apply mx-auto flex min-h-screen max-w-3xl flex-col px-8 py-32;
+}
