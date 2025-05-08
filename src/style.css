@@ -5,7 +5,6 @@
   font-weight: 300;
   letter-spacing: 0.02em;
   color: #f4f4f4;
-  /* border-color: #fafafa; */
 }
 
 .text-heading {
@@ -14,6 +13,6 @@
 }
 
 body {
-  background-color: #070707;
-  @apply mx-auto flex min-h-screen max-w-3xl flex-col px-8 py-32;
+  background-color: #0e0e0e;
+  @apply mx-auto flex min-h-screen max-w-3xl flex-col px-4 py-32 overflow-x-hidden;
 }
