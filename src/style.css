@@ -12,5 +12,5 @@
 
 body {
   background-color: #f4f4f4;
-  @apply mx-auto flex min-h-screen max-w-2xl flex-col px-4 py-32 overflow-x-hidden;
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 py-32 overflow-x-hidden;
 }
