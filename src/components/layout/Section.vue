@@ -3,7 +3,7 @@
 
     <div class="font-semibold text-lg pb-16 relative">
       <div class="absolute lg:right-44 xl:right-64 w-full">
-        Experience
+        {{ title }}
       </div>
     </div>
     

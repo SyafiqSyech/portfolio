@@ -2,7 +2,7 @@
 
 @theme {
   --color-primary: rgba(20,20,20);
-  --color-primary-light: rgba(20,20,20, 0.1);
+  --color-primary-light: rgba(20,20,20, 0.05);
   --color-secondary: rgba(140, 140, 140);
   --color-background: rgba(245,245,245);
   
