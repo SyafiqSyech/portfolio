@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" class="flex flex-col gap-4 border-[.1rem] border-border bg-background-secondary rounded-lg p-4 group cursor-pointer hoverMouseFollower">
+  <div :id="id" class="flex flex-col gap-4 border-[.1rem] border-border bg-background-secondary rounded-lg p-4 group cursor-pointer hover:border-border-hover transition-all hoverMouseFollower">
 
     <div class="aspect-square rounded-lg relative">
       
@@ -10,8 +10,8 @@
         <img 
           :src="'/src/assets/' + image"
           :alt="title + ' thumbnail'" 
-          class="rounded-lg group-hover:rotate-6 transition-all duration-300"
-          :class="phone ? 'h-full group-hover:translate-x-8' : 'w-full group-hover:-translate-y-8'"
+          class="rounded-lg group-hover:scale-105 group-hover:shadow-lg transition-all duration-300"
+          :class="phone ? 'h-full group-hover:rotate-4' : 'w-full group-hover:-rotate-4'"
         />
       </div>
 

@@ -121,7 +121,7 @@ export const projects: Project[] = [
       "Collaborated with designers to implement user-friendly interfaces.",
       "Participated in code reviews and contributed to team knowledge sharing.",
     ],
-    color: "#61636e",
+    color: "#586684",
   },
   {
     id: "pr2",
@@ -143,7 +143,7 @@ export const projects: Project[] = [
       "Collaborated with designers to implement user-friendly interfaces.",
       "Participated in code reviews and contributed to team knowledge sharing.",
     ],
-    color: "#ffc182",
+    color: "#95d4f3",
   },
   {
     id: "pr3",
@@ -165,7 +165,7 @@ export const projects: Project[] = [
       "Collaborated with designers to implement user-friendly interfaces.",
       "Participated in code reviews and contributed to team knowledge sharing.",
     ],
-    color: "#ded2ff",
+    color: "#feac91",
     phone: true,
   },
 ]

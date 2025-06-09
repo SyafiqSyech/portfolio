@@ -70,7 +70,7 @@ defineExpose({ showOnTarget, hideOnTarget });
 
 <template>
   <div
-    class="fixed pointer-events-none border-[.1rem] border-border bg-background px-1.5 py-0.5 gap-1.5 text-sm font-medium rounded-lg flex items-center text-secondary z-[9999] transition-[opacity]"
+    class="fixed pointer-events-none bg-primary px-2 py-1 gap-1.5 text-sm font-medium rounded-lg rounded-bl-none flex items-center text-background z-[9999] transition-[opacity]"
     :class="{
       'opacity-100': isVisible,
       'opacity-0': !isVisible,
@@ -82,7 +82,7 @@ defineExpose({ showOnTarget, hideOnTarget });
   >
     {{ text }}
     <IconArrowRight
-      class="w-4 h-4 stroke-secondary"
+      class="w-4 h-4 stroke-background"
     />
       
   </div>

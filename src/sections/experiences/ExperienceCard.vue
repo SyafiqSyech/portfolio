@@ -1,11 +1,11 @@
 <template>
-  <div :id="id" class="border-[.1rem] border-border bg-background-secondary rounded-lg p-4 cursor-pointer hoverMouseFollower">
+  <div :id="id" class="border-[.1rem] border-border bg-background-secondary rounded-lg p-4 cursor-pointer hover:border-border-hover transition-all hoverMouseFollower">
     
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
       <div class="text-secondary text-sm">
         {{ date }}
       </div>
-      <div class="font-medium">
+      <div class="font-medium max-sm:mt-4">
         {{ company }}
       </div>
     </div>

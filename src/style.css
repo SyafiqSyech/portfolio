@@ -3,11 +3,13 @@
 @theme {
   --color-primary: rgba(0, 0, 0);
   --color-secondary: rgba(132, 132, 132);
+  --color-accent: rgba(254, 172, 145);
   --color-background: rgba(255, 255, 255);
   --color-background-secondary: rgba(248, 248, 248);
   --color-background-secondary-light: rgba(248, 248, 248, 0.5);
   --color-background-button: rgba(255, 255, 255);
   --color-border: rgba(235, 235, 235);
+  --color-border-hover: rgba(215, 215, 215);
   
   --font-family: "Inter", sans-serif;
 }
@@ -18,5 +20,5 @@
 
 body {
   /* background-color: #f4f4f4; */
-  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 py-32 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight; 
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight; 
 }

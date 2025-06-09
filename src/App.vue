@@ -7,7 +7,6 @@ import Projects from './sections/projects/Projects.vue';
 import Skills from './sections/skills/Skills.vue';
 import MouseFollower from './components/ui/MouseFollower.vue';
 import { ref, onMounted } from 'vue';
-import { experiences, projects } from '../src/data/data';
 
 interface MouseFollower {
   showOnTarget: (element: Element) => void;
