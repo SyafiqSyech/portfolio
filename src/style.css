@@ -1,15 +1,22 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: rgba(20,20,20);
-  --color-primary-light: rgba(20,20,20, 0.05);
-  --color-secondary: rgba(140, 140, 140);
-  --color-background: rgba(245,245,245);
+  --color-primary: rgba(0, 0, 0);
+  --color-secondary: rgba(132, 132, 132);
+  --color-background: rgba(255, 255, 255);
+  --color-background-secondary: rgba(248, 248, 248);
+  --color-background-secondary-light: rgba(248, 248, 248, 0.5);
+  --color-background-button: rgba(255, 255, 255);
+  --color-border: rgba(235, 235, 235);
   
-  --font-family: "Lora", sans-serif;
+  --font-family: "Inter", sans-serif;
+}
+
+:root {
+  font-size: 14px
 }
 
 body {
   /* background-color: #f4f4f4; */
-  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 py-32 overflow-x-hidden bg-background text-primary font-family; 
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 py-32 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight; 
 }

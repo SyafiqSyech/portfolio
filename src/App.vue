@@ -1,14 +1,41 @@
 <script setup lang="ts">
+import Navbar from './components/ui/Navbar.vue';
 import Education from './sections/education/Education.vue';
 import Experience from './sections/experiences/Experiences.vue';
 import Hero from './sections/Hero.vue';
 import Projects from './sections/projects/Projects.vue';
 import Skills from './sections/skills/Skills.vue';
+import MouseFollower from './components/ui/MouseFollower.vue';
+import { ref, onMounted } from 'vue';
+import { experiences, projects } from '../src/data/data';
+
+interface MouseFollower {
+  showOnTarget: (element: Element) => void;
+  hideOnTarget: (element: Element) => void;
+}
+
+const mouseFollowerRef = ref<MouseFollower | null>(null);
+
+onMounted(() => {
+  if (mouseFollowerRef.value) {
+    const elShow = document.querySelectorAll('.hoverMouseFollower') as NodeListOf<Element>;
+    elShow.forEach((element) => {
+      mouseFollowerRef.value?.showOnTarget(element);
+    });
+    const elHide = document.querySelectorAll('.hideMouseFollower') as NodeListOf<Element>;
+    elHide.forEach((element) => {
+      mouseFollowerRef.value?.hideOnTarget(element);
+    });
+  }
+});
 
 </script>
 
 <template>
-  <div class="flex flex-col gap-48">
+
+  <Navbar />
+
+  <div class="flex flex-col gap-32">
     
     <Hero />
 
@@ -22,26 +49,7 @@ import Skills from './sections/skills/Skills.vue';
     
   </div>
 
-  
-  <!-- <div class="py-24 text-center">🟆 🟅 🟄 🞟 🞄 🞟 🟄 🟅 🟆</div> -->
-  <!-- <div class="py-24 text-center">🞄&emsp;🞟&emsp;🟄&emsp;🟅&emsp;🟆&emsp;🟅&emsp;🟄&emsp;🞟&emsp;🞄</div> -->
-
-  
-  
-  <!-- <div class="py-24 text-center">🟆 🟅 🟄 🞟 🞄 🞟 🟄 🟅 🟆</div> -->
-  <!-- <div class="py-24 text-center">🞄&emsp;🞟&emsp;🟄&emsp;🟅&emsp;🟆&emsp;🟅&emsp;🟄&emsp;🞟&emsp;🞄</div> -->
-
-
-  
-  <!-- <div class="py-24 text-center">🟆 🟅 🟄 🞟 🞄 🞟 🟄 🟅 🟆</div> -->
-  <!-- <div class="py-24 text-center">🞄&emsp;🞟&emsp;🟄&emsp;🟅&emsp;🟆&emsp;🟅&emsp;🟄&emsp;🞟&emsp;🞄</div> -->
-
-  
-  
-  <!-- <div class="py-24 text-center">🟆 🟅 🟄 🞟 🞄 🞟 🟄 🟅 🟆</div> -->
-  <!-- <div class="py-24 text-center">🞄&emsp;🞟&emsp;🟄&emsp;🟅&emsp;🟆&emsp;🟅&emsp;🟄&emsp;🞟&emsp;🞄</div> -->
-
-
+  <MouseFollower ref="mouseFollowerRef" />
 </template>
 
 <style></style>

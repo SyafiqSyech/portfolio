@@ -1,24 +1,26 @@
 <template>
-  <Section title="Projects">
+  <Section title="Projects" :project="true">
     
-    <div class="flex flex-col gap-16 justify-center">
+    <div class="flex flex-col gap-4 justify-center">
 
       <ProjectCard
-        v-for="(project, idx) in projects"
-        :key="idx"
+        v-for="(project) in projects"
+        :key="project.id"
+        :id="project.id"
         :title="project.title"
         :image="project.thumbnail"
-        :role="project.role"
-        :tools="project.tools"
-        :description="project.description"
+        :summary="project.summary"
         :links="project.links"
         :color="project.color"
+        :phone="project.phone"
       />
 
-      <div class="p-2 cursor-pointer bg-clip-padding border-2 border-primary-light hover:bg-primary-light transition-all rounded-md flex justify-center items-center text-sm font-medium gap-1 hover:gap-2">
-        More Projects
-        <svg  xmlns="http://www.w3.org/2000/svg"  width="18"  height="18"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 12l14 0" /><path d="M13 18l6 -6" /><path d="M13 6l6 6" /></svg>
-      </div>
+      <ButtonUI
+        label="View All Projects"
+        :handle-click="() => {}"
+      >
+      </ButtonUI>
+
 
     </div>
 
@@ -29,4 +31,5 @@
 import Section from '../../components/layout/Section.vue';
 import ProjectCard from './ProjectCard.vue';
 import { projects } from '../../data/data';
+import ButtonUI from '../../components/ui/ButtonUI.vue';
 </script>

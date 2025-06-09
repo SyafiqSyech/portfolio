@@ -1,14 +1,13 @@
 <template>
   <Section title="Experience">
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-4">
       <ExperienceCard
-        v-for="(exp, idx) in experiences"
-        :key="idx"
+        v-for="(exp) in experiences"
+        :key="exp.id"
+        :id="exp.id"
         :company="exp.company"
         :role="exp.role"
         :date="exp.date"
-        :location="exp.location"
-        :color="exp.color"
       />
     </div>
   </Section>
