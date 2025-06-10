@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { IconArrowRight } from '@tabler/icons-vue';
-import { ref, onMounted, onUnmounted, defineProps } from 'vue';
+import { ref, onMounted, onUnmounted } from 'vue';
 
 const isVisible = ref(false);
 const x = ref(0);
@@ -82,7 +82,7 @@ defineExpose({ showOnTarget, hideOnTarget });
   >
     {{ text }}
     <IconArrowRight
-      class="w-4 h-4 stroke-background"
+      class="w-4 h-4 stroke-backgtext-background"
     />
       
   </div>

@@ -1,6 +1,6 @@
 <template>
   <div
-    class="absolute pointer-events-none border-[.1rem] border-border bg-background px-1.5 py-0.5 gap-1.5 text-sm font-medium rounded-lg left-1/2 -translate-x-1/2 opacity-0 -top-4 transition-all z-50 flex items-center text-secondary"
+    class="absolute w-max pointer-events-none border-[.1rem] border-border bg-background px-1.5 py-0.5 gap-1.5 text-sm font-label rounded-lg left-1/2 -translate-x-1/2 opacity-0 -top-4 transition-all z-50 flex items-center text-secondary"
     :class="
       [
         props.group ? 'group' :'group-hover:opacity-100 group-hover:blur-none',

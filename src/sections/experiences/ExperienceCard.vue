@@ -1,22 +1,22 @@
 <template>
-  <div :id="id" class="border-[.1rem] border-border bg-background-secondary rounded-lg p-4 cursor-pointer hover:border-border-hover transition-all hoverMouseFollower">
+  <div :id="id" class="border-[.1rem] border-border bg-background-card rounded-lg p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all hoverMouseFollower">
     
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
-      <div class="text-secondary text-sm">
+      <div class="font-text text-secondary text-sm">
         {{ date }}
       </div>
-      <div class="font-medium max-sm:mt-4">
+      <div class="font-title max-sm:mt-4">
         {{ company }}
       </div>
     </div>
 
-    <div class="text-secondary mt-1">
+    <div class="font-text text-secondary mt-1">
       {{ role }}
     </div>
     
     <div class="sm:hidden text-sm mt-4">
       <ButtonUI
-        label="Learn More"
+        label="View Details"
         :handle-click="() => {}"
         :small="true"
         :iconRight="true"

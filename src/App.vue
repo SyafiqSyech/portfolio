@@ -16,6 +16,8 @@ interface MouseFollower {
 const mouseFollowerRef = ref<MouseFollower | null>(null);
 
 onMounted(() => {
+  document.body.setAttribute('data-theme', 'light');
+
   if (mouseFollowerRef.value) {
     const elShow = document.querySelectorAll('.hoverMouseFollower') as NodeListOf<Element>;
     elShow.forEach((element) => {

@@ -14,8 +14,8 @@
     <div class="relative z-10 text-center flex flex-col items-center gap-4">
 
       <div>
-        <div class="font-medium">Abdullah Syafiq</div>
-        <div class="font-medium text-2xl">Software Engineer</div>
+        <div class="font-title">Abdullah Syafiq</div>
+        <div class="font-header text-2xl">Software Engineer</div>
       </div>
 
       <div class="flex gap-3 justify-center items-center">
@@ -35,21 +35,30 @@
           <IconFileDescription />
         </ButtonUI>
         
-        <div class="py-3 px-4 hover:px-6 hover:bg-background-secondary rounded-lg group relative cursor-pointer transition-all">
+        <div
+          class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+          @click="openPage('mailto:syafiq.syech@gmail.com', false)"
+        >
           <HoverLabel label="Email" :external="true" />
           <IconMail
             class="stroke-secondary group-hover:stroke-primary transition-all"
           />
         </div>
         
-        <div class="py-3 px-4 hover:px-6 hover:bg-background-secondary rounded-lg group relative cursor-pointer transition-all">
+        <div
+          class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+          @click="openPage('https://github.com/SyafiqSyech', true)"
+        >
           <HoverLabel label="Github" :external="true" />
           <IconBrandGithub
             class="stroke-secondary group-hover:stroke-primary transition-all"
           />
         </div>
 
-        <div class="py-3 px-4 hover:px-6 hover:bg-background-secondary rounded-lg group relative cursor-pointer transition-all">
+        <div
+          class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+          @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)"
+        >
           <HoverLabel label="Linkedin" :external="true" />
           <IconBrandLinkedin
             class="stroke-secondary group-hover:stroke-primary transition-all"
@@ -66,4 +75,12 @@
 import { IconBrandGithub, IconBrandLinkedin, IconCrown, IconFileDescription, IconMail } from '@tabler/icons-vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
 import HoverLabel from '../components/ui/HoverLabel.vue';
+
+const openPage = (url: string, onBlank: boolean) => {
+  if (onBlank) {
+    window.open(url, '_blank');
+  } else {
+    window.location.href = url;
+  }
+};
 </script>

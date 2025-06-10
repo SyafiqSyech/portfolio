@@ -1,17 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
+
+@custom-variant dark (&:where([data-theme=dark], data-theme=dark *));
 
 @theme {
   --color-primary: rgba(0, 0, 0);
-  --color-secondary: rgba(132, 132, 132);
-  --color-accent: rgba(254, 172, 145);
+  --color-secondary: rgba(135, 135, 135);
   --color-background: rgba(255, 255, 255);
-  --color-background-secondary: rgba(248, 248, 248);
-  --color-background-secondary-light: rgba(248, 248, 248, 0.5);
+  --color-background-card: rgba(245, 245, 245);
+  --color-background-card-hover: rgba(235, 235, 235);
   --color-background-button: rgba(255, 255, 255);
+  --color-background-button-hover: rgba(235, 235, 235);
+  --color-background-button-cardhover: rgba(245, 245, 245);
+  --color-background-button-cardhover-hover: rgba(215, 215, 215);
+  --color-background-icon-hover: rgba(245, 245, 245);
   --color-border: rgba(235, 235, 235);
   --color-border-hover: rgba(215, 215, 215);
+
+  --color-accent: rgba(254, 172, 145);
+
+  --font-weight-header: 400;
+  --font-weight-title: 400;
+  --font-weight-text: 400;
+  --font-weight-label: 500;
   
   --font-family: "Inter", sans-serif;
+}
+
+[data-theme="dark"] {
+  --color-primary: rgba(255, 255, 255);
+  --color-secondary: rgba(135, 135, 135);
+  --color-background: rgba(30, 30, 30);
+  --color-background-card: rgba(35, 35, 35);
+  --color-background-card-hover: rgba(40, 40, 40);
+  --color-background-button: rgba(45, 45, 45);
+  --color-background-button-hover: rgba(65, 65, 65);
+  --color-background-button-cardhover: rgba(65, 65, 65);
+  --color-background-button-cardhover-hover: rgba(85, 85, 85);
+  --color-background-icon-hover: rgba(40, 40, 40);
+  --color-border: rgba(45, 45, 45);
+  --color-border-hover: rgba(65, 65, 65);
 }
 
 :root {
@@ -19,6 +49,5 @@
 }
 
 body {
-  /* background-color: #f4f4f4; */
-  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight; 
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight transition-[background-color,color,border-color]; 
 }

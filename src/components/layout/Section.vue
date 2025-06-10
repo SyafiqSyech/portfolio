@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-    <div class="font-medium text-2xl pb-8" :class="project ? 'flex justify-between items-center' : ''">
+    <div class="font-header text-2xl pb-8" :class="project ? 'flex justify-between items-center' : ''">
       {{ title }}
       <ButtonUI
         v-if="project"
