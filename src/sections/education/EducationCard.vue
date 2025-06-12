@@ -21,7 +21,6 @@ interface Props {
   institution: string;
   degree: string;
   date: string;
-  color: string;
 }
 
 defineProps<Props>();

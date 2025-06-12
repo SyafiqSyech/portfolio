@@ -4,7 +4,6 @@
       :institution="education.institution"
       :degree="education.degree"
       :date="education.date"
-      :color="education.color"
     />
   </Section>
 </template>

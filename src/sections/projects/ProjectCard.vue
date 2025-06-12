@@ -1,7 +1,10 @@
 <template>
-  <div :id="id" class="flex flex-col gap-4 border-[.1rem] border-border bg-background-card rounded-lg p-4 group cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all hoverMouseFollower">
+  <div
+    :id="id"
+    class="flex flex-col gap-4 border-[.1rem] border-border bg-background-card rounded-2xl p-4 group cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all"
+  >
 
-    <div class="aspect-square rounded-lg relative">
+    <div class="aspect-square relative">
       
       <div
         :style="{ backgroundColor: color }"
@@ -26,7 +29,7 @@
       </div>
     </div>
 
-    <div class="sm:flex text-sm gap-2">
+    <div class="sm:flex sm:flex-wrap text-sm gap-2">
       <ButtonUI
         label='View Details'
         :handle-click="() => {}"
@@ -37,6 +40,7 @@
         <IconArrowRight class="w-4 h-4" />
       </ButtonUI>
       <ButtonUI
+        :id="'gallery-' + id"
         label='Gallery'
         :handle-click="() => {}"
         :small="true"
@@ -45,6 +49,7 @@
         <IconPhoto class="w-4 h-4" />
       </ButtonUI>
       <ButtonUI
+        :id="'source-code-' + id"
         v-if="links?.github"
         label='Source Code'
         :handle-click="() => openLink(links?.github)"
@@ -54,6 +59,7 @@
         <IconCode class="w-4 h-4" />
       </ButtonUI>
       <ButtonUI
+        :id="'website-' + id"
         v-if="links?.website"
         label='Website'
          :handle-click="() => openLink(links?.website)"

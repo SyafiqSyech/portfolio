@@ -1,18 +1,19 @@
 <template>
   <div class="">
 
-    <div class="font-header text-2xl pb-8" :class="project ? 'flex justify-between items-center' : ''">
+    <div class="font-header text-2xl pb-8" :class="more ? 'flex justify-between items-center' : ''">
       {{ title }}
-      <ButtonUI
-        v-if="project"
-        label="More"
-        :handle-click="() => {}"
-        :small="true"
-        :icon-right="true"
-        class="text-sm"
-      >
-        <IconArrowRight class="w-4 h-4" />
-      </ButtonUI>
+      <RouterLink v-if="more" to="/projects">
+        <ButtonUI
+          label="More"
+          :handle-click="() => {}"
+          :small="true"
+          :icon-right="true"
+          class="text-sm"
+        >
+          <IconArrowRight class="w-4 h-4" />
+        </ButtonUI>
+      </RouterLink>
     </div>
     
     <slot></slot>
@@ -29,7 +30,7 @@ import ButtonUI from '../ui/ButtonUI.vue';
       type: String,
       required: true
     },
-    project: {
+    more: {
       type: Boolean,
       default: false
     }

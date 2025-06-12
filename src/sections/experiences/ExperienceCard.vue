@@ -1,5 +1,5 @@
 <template>
-  <div :id="id" class="border-[.1rem] border-border bg-background-card rounded-lg p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all hoverMouseFollower">
+  <div :id="id" class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all hoverMouseFollower">
     
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
       <div class="font-text text-secondary text-sm">

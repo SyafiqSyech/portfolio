@@ -1,10 +1,10 @@
 <template>
-  <Section title="Projects" :more="true">
+  <Section title="All My Projects">
     
     <div class="flex flex-col gap-4 justify-center">
 
       <ProjectCard
-        v-for="(project) in projects.slice(0, 3)"
+        v-for="(project) in projects"
         :key="project.id"
         :id="project.id"
         :title="project.title"
@@ -14,23 +14,23 @@
         :color="project.color"
         :phone="project.phone"
       />
-      
-      <RouterLink to="/projects">
+
+      <RouterLink to="/">
         <ButtonUI
-          label="View All Projects"
+          label="Go Back Home"
           :handle-click="() => {}"
         >
         </ButtonUI>
       </RouterLink>
-  
+
     </div>
-    
+
   </Section>
 </template>
 
 <script setup lang="ts">
-import Section from '../../components/layout/Section.vue';
-import ProjectCard from './ProjectCard.vue';
-import { projects } from '../../data/data';
-import ButtonUI from '../../components/ui/ButtonUI.vue';
+import Section from '../components/layout/Section.vue';
+import ProjectCard from '../sections/projects/ProjectCard.vue';
+import ButtonUI from '../components/ui/ButtonUI.vue';
+import { projects } from '../data/data';
 </script>

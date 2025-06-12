@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Averia+Serif+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
@@ -16,16 +15,17 @@
   --color-background-button-cardhover: rgba(245, 245, 245);
   --color-background-button-cardhover-hover: rgba(215, 215, 215);
   --color-background-icon-hover: rgba(245, 245, 245);
-  --color-border: rgba(235, 235, 235);
+  --color-border: rgba(225, 225, 225);
   --color-border-hover: rgba(215, 215, 215);
 
   --color-accent: rgba(254, 172, 145);
+  --color-accent-light: rgba(254, 172, 145, .3);
 
   --font-weight-header: 400;
-  --font-weight-title: 400;
+  --font-weight-title: 500;
   --font-weight-text: 400;
   --font-weight-label: 500;
-  
+
   --font-family: "Inter", sans-serif;
 }
 
@@ -49,5 +49,15 @@
 }
 
 body {
-  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight transition-[background-color,color,border-color]; 
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-16 sm:pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight;
+}
+
+.theme-transition {
+  transition: background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+/* Custom highlight styling */
+::selection {
+  background-color: var(--color-accent-light);
+  color: var(--color-accent);
 }

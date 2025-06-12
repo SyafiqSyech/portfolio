@@ -69,7 +69,7 @@ export const skills: {
     ["Typescript",""],
     ["HTML/CSS",""],
     ["TailwindCSS",""],
-    ["RESTful API Integration",""],
+    ["API Integration",""],
   ],
   tools: [
     ["Git/Github",""],
@@ -171,7 +171,7 @@ export const projects: Project[] = [
   },
   {
     id: "pr4",
-    title: "Character Sheet",
+    title: "Character Sheet (Ongoing)",
     thumbnail: "charsheet.png",
     role: "Solo Developer",
     tools: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
@@ -190,13 +190,13 @@ export const projects: Project[] = [
       "Collaborated with designers to implement user-friendly interfaces.",
       "Participated in code reviews and contributed to team knowledge sharing.",
     ],
-    color: "#feac91",
+    color: "#7c7c7c",
     phone: true,
   },
   {
     id: "pr5",
     title: "Portfolio Website (Old)",
-    thumbnail: "cognitivetest.png",
+    thumbnail: "portfolioold.png",
     role: "Solo Developer",
     tools: ["React", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Personal website built using React to showcase projects, experience, and skills.",
@@ -212,7 +212,7 @@ export const projects: Project[] = [
       "Developed and maintained web applications using React and TypeScript.",
       
     ],
-    color: "#feac91",
+    color: "#ffe59e",
   },
   {
     id: "pr6",
@@ -233,6 +233,6 @@ export const projects: Project[] = [
     description: [
       "Developed and maintained web applications using React and TypeScript.",
     ],
-    color: "#feac91",
+    color: "#f27f7c",
   },
 ]

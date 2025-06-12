@@ -1,5 +1,5 @@
 <template>
-  <Section title="Experience">
+  <Section title="Experiences">
     <div class="flex flex-col gap-4">
       <ExperienceCard
         v-for="(exp) in experiences"
