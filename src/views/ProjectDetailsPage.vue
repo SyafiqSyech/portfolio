@@ -132,6 +132,3 @@ const openLink = (url: string | undefined) => {
   }
 };
 </script>
-
-<style scoped>
-</style>

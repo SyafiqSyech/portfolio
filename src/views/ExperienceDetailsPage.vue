@@ -46,8 +46,6 @@ import { useRoute } from 'vue-router';
 import { experiences } from '../data/data';
 import Breadcrumb from '../components/ui/Breadcrumb.vue';
 import { IconCheck } from '@tabler/icons-vue';
-import SkillCard from '../sections/skills/SkillCard.vue';
-import ButtonUI from '../components/ui/ButtonUI.vue';
 
 const route = useRoute();
 const experience = experiences.find(exp => exp.id === route.params.experienceId);
