@@ -1,15 +1,14 @@
 <template>
   <div class="relative">
 
-    <div class="absolute w-full -top-12 sm:-top-28 flex justify-end sm:justify-center text-sm">
+    <div class="absolute -right-4">
       <ButtonUI
         label="Back"
         :handle-click="() => router.back()"
-        class="fixed z-50"
-        :small="true"
+        class="fixed"
         :iconRight="true"
       >
-        <IconX class="w-4 h-4" />
+        <IconX class="w-5 h-5" />
       </ButtonUI>
     </div>
 
@@ -33,7 +32,7 @@
         </div>
       </div>
   
-      <div class="grid sm:grid-cols-2 gap-8 font-text">
+      <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
           <div class="text-secondary mb-1">Role</div>
           <div class="text-primary">{{ project.role }}</div>

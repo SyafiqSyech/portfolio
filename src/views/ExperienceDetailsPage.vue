@@ -12,7 +12,7 @@
       {{ experience?.company }}
     </div>
 
-    <div class="grid sm:grid-cols-2 gap-8 font-text">
+    <div class="grid sm:grid-cols-2 gap-4 font-text">
       <div>
         <div class="text-secondary mb-1">Position</div>
         <div class="text-primary">{{ experience?.role }}</div>

@@ -142,7 +142,7 @@ export const projects: Project[] = [
       { src: "layzy5.png", phone: false },
     ],
     description: [
-      "Led a team of three to develop a modular web section layout library for faster web development using React, React libraries, TailwindCSS, TypeScript, Vite, deployed via Netlify, collaboration using Git/GitHub.",
+      "Led a team of three to develop a modular web section layout library for faster web development using React, deployed via Netlify, and collaborated using Git/GitHub.",
       "Designed all of the interfaces, developed the layout editor system and contributed to database structuring.",
     ],
     color: "#95d4f3",
