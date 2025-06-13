@@ -13,14 +13,14 @@
         <img 
           :src="`${id}/${image}`"
           :alt="`${title} thumbnail`"
-          class="rounded-lg group-hover:scale-105 group-hover:shadow-lg transition-all duration-300 group-odd:group-hover:rotate-4 group-even:group-hover:-rotate-4"
+          class="rounded-lg group-hover:scale-105 group-hover:shadow-lg duration-300 group-odd:group-hover:rotate-4 group-even:group-hover:-rotate-4"
           :class="phone ? 'h-full' : 'w-full'"
         />
       </div>
     </div>
 
     <div>
-      <div class="font-title mb-1">
+      <div class="font-title mb-1 transition-all">
         {{ title }}
       </div>
       <div class="font-text text-secondary">

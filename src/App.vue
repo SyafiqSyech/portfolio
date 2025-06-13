@@ -21,7 +21,7 @@ import { onMounted } from 'vue';
 
 onMounted(() => {
   setTimeout(() => {
-    document.body.style.transition = 'background-color 0.15s ease, color 0.15s ease, border-color 0.15s ease';
+    document.body.style.transition = 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)';
   }, 100);
 
   const theme = localStorage.getItem('theme') || 'light';

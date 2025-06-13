@@ -1,5 +1,5 @@
 <template>
-  <div class="fixed top-0 left-0 h-screen w-full z-50 flex items-center justify-center pointer-events-none">
+  <div class="fixed top-0 left-0 h-screen w-full z-50 flex items-center justify-center pointer-events-none transition-colors">
     
     <div 
       class="absolute bottom-2 sm:bottom-4 p-2 bg-background flex justify-center items-center border-[.1rem] border-border rounded-lg pointer-events-auto transition-all"
