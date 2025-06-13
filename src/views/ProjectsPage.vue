@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col gap-8">
+    
     <Breadcrumb 
       :items="[
         { label: 'Home', to: '/' },

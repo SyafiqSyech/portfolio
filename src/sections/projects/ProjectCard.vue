@@ -11,7 +11,7 @@
         class="aspect-square rounded-lg flex items-center justify-center p-3 relative"
       >
         <img 
-          :src="`/src/assets/${id}/${image}`"
+          :src="`${id}/${image}`"
           :alt="`${title} thumbnail`"
           class="rounded-lg group-hover:scale-105 group-hover:shadow-lg transition-all duration-300 group-odd:group-hover:rotate-4 group-even:group-hover:-rotate-4"
           :class="phone ? 'h-full' : 'w-full'"
@@ -61,7 +61,7 @@
         :id="`website-${id}`"
         v-if="links?.website"
         label='Website'
-         :handle-click="() => openLink(links?.website)"
+        :handle-click="() => openLink(links?.website)"
         :small="true"
         class="hidden sm:flex"
       >

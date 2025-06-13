@@ -98,7 +98,7 @@
           ]"
         >
           <img
-            :src="`/src/assets/${project.id}/${image.src}`"
+            :src="`/${project.id}/${image.src}`"
             :alt="`${project.title} image ${index + 1}`"
             class="rounded-lg w-full hover:scale-105 hover:shadow-lg transition-all duration-300"
           />
