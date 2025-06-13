@@ -34,7 +34,7 @@
 
       <ButtonUI
         label="Resume"
-        :handle-click="() => {}"
+        :handle-click="openPdf"
         class="mr-2"
       >
         <IconFileDescription />
@@ -91,5 +91,10 @@ const openPage = (url: string, onBlank: boolean) => {
   } else {
     window.location.href = url;
   }
+};
+
+const openPdf = () => {
+  const pdfUrl = '/CV.pdf';
+  window.open(pdfUrl, '_blank');
 };
 </script>
