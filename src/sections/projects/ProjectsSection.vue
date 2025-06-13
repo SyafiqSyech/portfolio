@@ -8,11 +8,11 @@
         :key="project.id"
         :id="project.id"
         :title="project.title"
-        :image="project.thumbnail"
+        :image="project.images[0].src"
         :summary="project.summary"
         :links="project.links"
         :color="project.color"
-        :phone="project.phone"
+        :phone="project.images[0].phone"
       />
       
       <RouterLink to="/projects">

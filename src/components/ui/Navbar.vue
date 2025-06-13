@@ -1,5 +1,6 @@
 <template>
-  <div class="fixed top-0 left-0 h-screen w-screen z-50 flex items-center justify-center pointer-events-none">
+  <div class="fixed top-0 left-0 h-screen w-full z-50 flex items-center justify-center pointer-events-none">
+    
     <div 
       class="absolute bottom-2 sm:bottom-4 p-2 bg-background flex justify-center items-center border-[.1rem] border-border rounded-lg pointer-events-auto transition-all"
       style="box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;"
@@ -120,3 +121,6 @@ const openPage = (url: string, onBlank: boolean) => {
   }
 };
 </script>
+
+<style scoped>
+</style>

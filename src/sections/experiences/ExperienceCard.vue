@@ -1,6 +1,10 @@
 <template>
-  <div :id="id" class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all hoverMouseFollower">
-    
+  <RouterLink 
+    :id="id"
+    :to="`/${id}`"
+    class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all group"
+  >
+
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
       <div class="font-text text-secondary text-sm">
         {{ date }}
@@ -25,10 +29,11 @@
       </ButtonUI>
     </div>
 
-  </div>
+  </RouterLink>
 </template>
 
 <script setup lang="ts">
+import { RouterLink } from 'vue-router';
 import { IconArrowRight } from '@tabler/icons-vue';
 import ButtonUI from '../../components/ui/ButtonUI.vue';
 

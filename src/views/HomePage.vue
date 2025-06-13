@@ -15,9 +15,9 @@
 </template>
 
 <script setup lang="ts">
-import Education from '../sections/education/Education.vue';
-import Experience from '../sections/experiences/Experiences.vue';
+import Education from '../sections/education/EducationSection.vue';
+import Experience from '../sections/experiences/ExperiencesSection.vue';
 import Hero from '../sections/Hero.vue';
-import Projects from '../sections/projects/Projects.vue';
-import Skills from '../sections/skills/Skills.vue';
+import Projects from '../sections/projects/ProjectsSection.vue';
+import Skills from '../sections/skills/SkillsSection.vue';
 </script>

@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-    <div class="font-header text-2xl pb-8" :class="more ? 'flex justify-between items-center' : ''">
+    <div class="font-header text-2xl mb-8" :class="more ? 'flex justify-between items-center' : ''">
       {{ title }}
       <RouterLink v-if="more" to="/projects">
         <ButtonUI

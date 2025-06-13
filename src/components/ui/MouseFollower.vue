@@ -1,3 +1,24 @@
+<template>
+  <div
+    class="fixed pointer-events-none select-none bg-primary px-2 py-1 gap-1.5 text-sm font-medium rounded-lg rounded-bl-none flex items-center text-background z-[9999] transition-[opacity]"
+    :class="{
+      'opacity-100': isVisible,
+      'opacity-0': !isVisible,
+    }"
+    :style="{
+      left: `${x+8}px`,
+      top: `${y-24}px`
+    }"
+  >
+    {{ text }}
+    <div class="arrow-animate">
+      <IconArrowRight
+        class="w-4 h-4 stroke-background"
+      />
+    </div>
+  </div>
+</template>
+
 <script setup lang="ts">
 import { IconArrowRight } from '@tabler/icons-vue';
 import { ref, onMounted, onUnmounted, watch } from 'vue';
@@ -86,27 +107,6 @@ watch(
   { immediate: true }
 );
 </script>
-
-<template>
-  <div
-    class="fixed pointer-events-none select-none bg-primary px-2 py-1 gap-1.5 text-sm font-medium rounded-lg rounded-bl-none flex items-center text-background z-[9999] transition-[opacity]"
-    :class="{
-      'opacity-100': isVisible,
-      'opacity-0': !isVisible,
-    }"
-    :style="{
-      left: `${x+8}px`,
-      top: `${y-24}px`
-    }"
-  >
-    {{ text }}
-    <div class="arrow-animate">
-      <IconArrowRight
-        class="w-4 h-4 stroke-background"
-      />
-    </div>
-  </div>
-</template>
 
 <style>
 .arrow-animate {

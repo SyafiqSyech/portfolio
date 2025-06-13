@@ -30,11 +30,6 @@
       <div class="text-secondary">South Jakarta, Indonesia</div>
     </div>
 
-    <div class="text-secondary text-center text-sm leading-relaxed">
-      <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
-      Email me at <span class="text-primary transition-all">syafiq.syech@gmail.com</span>
-    </div>
-
     <div class="flex items-center">
 
       <ButtonUI
@@ -77,6 +72,10 @@
 
     </div>
 
+    <div class="text-secondary text-center text-sm leading-relaxed">
+      <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
+      Email me at <span class="text-primary transition-all">syafiq.syech@gmail.com</span>
+    </div>
 
   </div>
 </template>

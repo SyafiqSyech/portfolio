@@ -1,4 +1,4 @@
-interface Experience {
+export interface Experience {
   id: string;
   company: string;
   role: string;
@@ -13,42 +13,41 @@ interface Education {
   date: string;
 }
 
-interface Project {
+export interface Project {
   id: string;
   title: string;
-  thumbnail: string;
   role: string;
-  tools?: string[];
+  type: string;
+  tech: string[];
   summary: string;
-  links?: {
+  links: {
     github?: string;
     website?: string;
   };
-  images?: string[];
+  images: { src: string; phone: boolean }[];
   description: string[];
   color: string;
-  phone?: boolean;
 }
 
 export const experiences: Experience[] = [
   {
-    id: "ex1",
+    id: "periksa",
     company: "P.T Periksa Solusi Indonesia",
     role: "Frontend Developer Intern",
     date: "Feb 2024 - Feb 2025",
     location: "Central Jakarta, Indonesia (Remote)",
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
-      "Collaborated with designers to implement user-friendly interfaces.",
-      "Participated in code reviews and contributed to team knowledge sharing.",
-    ]
+      "Maintained an SaaS dashboard application by developing and updating interactive tables with advanced filtering, CRUD operations, and complex forms using Angular.",
+      "Built and updated RESTful API service integration and data models with TypeScript.",
+      "Contributed to a separate application by building printable form templates using PHP and HTML, and utilized DBeaver for data validation.",
+    ],
   },
   {
-    id: "ex2",
+    id: "yourcompany",
     company: "Your Company Hopefully :)",
     role: "Software Engineer",
     date: "Tomorrow",
-    location: undefined,
+    location: "Anywhere",
     description: [
       "Hoping to build meaningful applications that genuinely help people.",
       "Open to opportunities in various industries, including health tech, automotive, Islamic sectors, and others.",
@@ -101,65 +100,66 @@ export const education: Education = {
 
 export const projects: Project[] = [
   {
-    id: "pr1",
+    id: "modmanager",
     title: "Mod Manager",
-    thumbnail: "modmanager.png",
     role: "Solo Developer",
-    tools: ["React", "TypeScript", "Tailwind CSS", "Vite", "Axios"],
+    type: "Personal Project",
+    tech: ["React", "TypeScript", "Tailwind CSS", "Vite", "Axios"],
     summary: "React-based website for managing Minecraft mods using Modrinths API.",
     links: {
       github: "https://github.com/SyafiqSyech/mod-manager",
       website: "https://modrinthmanager.netlify.app/",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "modmanager.png", phone: false },
+      { src: "modmanager1.png", phone: false },
+      { src: "modmanager2.png", phone: false },
+      { src: "modmanager3.png", phone: false },
     ],
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
-      "Collaborated with designers to implement user-friendly interfaces.",
-      "Participated in code reviews and contributed to team knowledge sharing.",
+      "Developed a web-based manager for Minecraft mods using React TypeScript.",
+      "Built custom reusable hooks for fetching data and debouncing inputs, and integrated Modrinth’s API using Axios, applying best practices learned from industry experience and independent study.",
+      "Designed a scalable project architecture and folder system to enhance maintainability and future development.",
     ],
     color: "#586684",
   },
   {
-    id: "pr2",
+    id: "layzy",
     title: "Layzy",
-    thumbnail: "layzy.png",
     role: "Project Leader / Frontend Developer",
-    tools: ["React", "React Libraries", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    type: "University Final Project",
+    tech: ["React", "React Libraries", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Website section layout library with customizable layouts.",
     links: {
       github: "https://github.com/JeRiJeMaRiCo6203/ComponentWireframeLibrary",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "layzy.png", phone: false },
+      { src: "layzy1.png", phone: false },
+      { src: "layzy2.png", phone: false },
+      { src: "layzy3.png", phone: false },
+      { src: "layzy4.png", phone: false },
+      { src: "layzy5.png", phone: false },
     ],
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
-      "Collaborated with designers to implement user-friendly interfaces.",
-      "Participated in code reviews and contributed to team knowledge sharing.",
+      "Led a team of three to develop a modular web section layout library for faster web development using React, React libraries, TailwindCSS, TypeScript, Vite, deployed via Netlify, collaboration using Git/GitHub.",
+      "Designed all of the interfaces, developed the layout editor system and contributed to database structuring.",
     ],
     color: "#95d4f3",
   },
   {
-    id: "pr3",
+    id: "portfolio",
     title: "Portfolio Website",
-    thumbnail: "portfolio.png",
     role: "Solo Developer",
-    tools: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    type: "Personal Project",
+    tech: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Personal website built using Vue to showcase projects, experience, and skills.",
     links: {
       github: "https://github.com/SyafiqSyech/portfolio",
       website: "https://abdullahsyafiq.netlify.app/",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "portfolio.png", phone: true },
     ],
     description: [
       "Built a responsive personal portfolio website using Vue.js and Tailwind CSS to showcase projects, professional experience, and resume.",
@@ -167,68 +167,57 @@ export const projects: Project[] = [
       "Deployed on Netlify with GitHub-integrated CI/CD pipeline for automated updates and version control.",
     ],
     color: "#feac91",
-    phone: true,
   },
   {
-    id: "pr4",
+    id: "charsheet",
     title: "Character Sheet (Ongoing)",
-    thumbnail: "charsheet.png",
     role: "Solo Developer",
-    tools: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    type: "Personal Project",
+    tech: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Virtual character sheet for tabletop RPGs, built with Vue.",
     links: {
       github: "https://github.com/SyafiqSyech/char-sheet",
       website: "https://bonekeeper.netlify.app/",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "charsheet.png", phone: true },
     ],
     description: [
       "Developed and maintained web applications using React and TypeScript.",
-      "Collaborated with designers to implement user-friendly interfaces.",
-      "Participated in code reviews and contributed to team knowledge sharing.",
     ],
     color: "#7c7c7c",
-    phone: true,
   },
   {
-    id: "pr5",
+    id: "oldportfolio",
     title: "Portfolio Website (Old)",
-    thumbnail: "portfolioold.png",
     role: "Solo Developer",
-    tools: ["React", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    type: "Personal Project",
+    tech: ["React", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Personal website built using React to showcase projects, experience, and skills.",
     links: {
       github: "https://github.com/SyafiqSyech/personal",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "oldportfolio.png", phone: false },
     ],
     description: [
       "Developed and maintained web applications using React and TypeScript.",
-      
     ],
     color: "#ffe59e",
   },
   {
-    id: "pr6",
+    id: "cognitivetest",
     title: "Cognitive Test",
-    thumbnail: "cognitivetest.png",
     role: "Solo Developer",
-    tools: ["HTML", "CSS", "JavaScript", "Netlify", "Game Design"],
+    type: "Personal Project",
+    tech: ["HTML", "CSS", "JavaScript", "Netlify", "Game Design"],
     summary: "Interactive cognitive test games with high score tracking.",
     links: {
       github: "https://github.com/SyafiqSyech/cognitive-test",
       website: "https://sherbetlemon.netlify.app/",
     },
     images: [
-      "test2.png",
-      "test.png",
-      "test2.png",
+      { src: "cognitivetest.png", phone: false },
     ],
     description: [
       "Developed and maintained web applications using React and TypeScript.",
