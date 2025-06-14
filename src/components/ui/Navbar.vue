@@ -116,7 +116,6 @@
 import { onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh, IconMoon, IconArrowLeft } from '@tabler/icons-vue';
-import HoverLabel from '../../components/ui/HoverLabel.vue';
 import ButtonUI from './ButtonUI.vue';
 
 const route = useRoute();
