@@ -54,6 +54,7 @@ onUnmounted(() => {
 .page-transition-enter-from,
 .page-transition-leave-to {
   opacity: 0;
+  transform: translateY(100px);
 }
 
 .page-transition-leave-active {
