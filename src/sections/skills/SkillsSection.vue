@@ -1,7 +1,7 @@
 <template>
   <Section title="Skills">
     <div class="grid grid-cols-[8rem_auto] gap-4">
-      <div class="font-title">
+      <div class="font-title transition-colors">
         Frontend
       </div>
       <div class="flex flex-wrap gap-2">
@@ -12,7 +12,7 @@
           :note="skill[1]"
         />
       </div>
-      <div class="font-title">
+      <div class="font-title transition-colors">
         Tools
       </div>
       <div class="flex flex-wrap gap-2">
@@ -23,7 +23,7 @@
           :note="skill[1]"
         />
       </div>
-      <div class="font-title">
+      <div class="font-title transition-colors">
         Others
       </div>
       <div class="flex flex-wrap gap-2">
@@ -34,7 +34,7 @@
           :note="skill[1]"
         />
       </div>
-      <div class="font-title">
+      <div class="font-title transition-colors">
         Languages
       </div>
       <div class="flex flex-wrap gap-2">

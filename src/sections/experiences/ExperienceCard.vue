@@ -2,7 +2,7 @@
   <RouterLink 
     :id="id"
     :to="`/${id}`"
-    class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all group"
+    class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer sm:hover:border-border-hover sm:hover:bg-background-card-hover transition-all group"
   >
 
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">

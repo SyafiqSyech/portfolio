@@ -1,27 +1,20 @@
 <template>
   <div class="flex flex-col items-center gap-4">
 
-    <div class="flex justify-center group relative hover:mb-12 transition-all duration-300">
+    <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
       
-      <div class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 group-hover:w-40 transition-all duration-300" style="background-image: url('Profile.png');"></div>
+      <div class="w-24 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300" style="background-image: url('Profile.png');"></div>
       
-      <div class="absolute z-10 -top-24 hover:px-44 opacity-0 group-hover:-top-18 group-hover:opacity-100 transition-all duration-300 pointer-events-none">
+      <div class="absolute z-10 -top-24 sm:hover:px-44 opacity-0 sm:group-hover:-top-18 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">
         <IconCrown class="w-16 h-16 stroke-accent" />
      </div>
 
     </div>
 
-    <div class="text-center">
+    <div class="text-center transition-colors">
       <div class="font-title">Abdullah Syafiq</div>
       <div class="font-header text-2xl">Software Engineer</div>
     </div>
-    
-    <!-- <div class="w-24 aspect-square rounded-full relative bg-cover" style="background-image: url('/src/assets/Profile.png');"></div>
-    
-    <div class="leading-tight text-center">
-      <div class="font-title">Abdullah Syafiq</div>
-      <div class="font-header text-2xl">Software Engineer</div>
-    </div> -->
     
     <div class="flex gap-3 items-center">
       <div class="w-2 aspect-square rounded-full bg-accent">
@@ -41,40 +34,56 @@
       </ButtonUI>
       
       <div
-        class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+        id="email-link"
+        class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('mailto:syafiq.syech@gmail.com', false)"
       >
-        <HoverLabel label="Email" :external="true" />
+        <!-- <HoverLabel label="Email" :external="true" /> -->
         <IconMail
-          class="stroke-secondary group-hover:stroke-primary transition-all"
+          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
       
       <div
-        class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+        id="github-link"
+        class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('https://github.com/SyafiqSyech', true)"
       >
-        <HoverLabel label="Github" :external="true" />
+        <!-- <HoverLabel label="Github" :external="true" /> -->
         <IconBrandGithub
-          class="stroke-secondary group-hover:stroke-primary transition-all"
+          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 
       <div
-        class="py-3 px-4 hover:px-6 hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
+        id="linkedin-link"
+        class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)"
       >
-        <HoverLabel label="Linkedin" :external="true" />
+        <!-- <HoverLabel label="Linkedin" :external="true" /> -->
         <IconBrandLinkedin
-          class="stroke-secondary group-hover:stroke-primary transition-all"
+          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 
     </div>
 
-    <div class="text-secondary text-center text-sm leading-relaxed">
+    <div class="text-secondary text-center text-sm leading-relaxed relative">
       <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
-      Email me at <span class="text-primary transition-all">syafiq.syech@gmail.com</span>
+      Email me at
+      <span
+        class="cursor-pointer sm:hover:underline sm:hover:underline-offset-1 relative"
+      >
+        <span
+          id="email-copy"
+          class="transition-colors"
+          style="color: var(--color-primary);"
+          @click="copyEmail"
+        >
+          syafiq.syech@gmail.com
+        </span>
+        <div id="email-copy-success" style="display: none;" class="w-full h-full absolute left-0 top-0"></div>
+      </span>
     </div>
 
   </div>
@@ -83,7 +92,6 @@
 <script setup lang="ts">
 import { IconBrandGithub, IconBrandLinkedin, IconCrown, IconFileDescription, IconMail } from '@tabler/icons-vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
-import HoverLabel from '../components/ui/HoverLabel.vue';
 
 const openPage = (url: string, onBlank: boolean) => {
   if (onBlank) {
@@ -96,5 +104,27 @@ const openPage = (url: string, onBlank: boolean) => {
 const openPdf = () => {
   const pdfUrl = '/CV.pdf';
   window.open(pdfUrl, '_blank');
+};
+
+const copyEmail = () => {
+  const email = 'syafiq.syech@gmail.com';
+  navigator.clipboard.writeText(email)
+    .then(() => {
+      const emailCopyElement = document.getElementById('email-copy');
+      const successElement = document.getElementById('email-copy-success');
+      
+      if (emailCopyElement && successElement) {
+        emailCopyElement.style.color = 'var(--color-accent)';
+        successElement.style.display = 'block';
+        setTimeout(() => {
+          emailCopyElement.style.color = 'var(--color-primary)';
+          successElement.style.display = 'none';
+        }, 1000);
+      }
+    })
+    .catch(err => {
+      console.error('Failed to copy email: ', err);
+      alert('Failed to copy email.');
+    });
 };
 </script>

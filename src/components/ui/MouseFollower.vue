@@ -7,20 +7,33 @@
     }"
     :style="{
       left: `${x+8}px`,
-      top: `${y-24}px`
+      top: `${y-28}px`
     }"
   >
     {{ text }}
-    <div class="arrow-animate">
-      <IconArrowRight
-        class="w-4 h-4 stroke-background"
-      />
+    <IconArrowUpRight
+      v-if="icon === 'arrow-up-right'"
+      class="w-4 h-4 stroke-background"
+    />
+    <IconCopy
+      v-if="icon === 'copy'"
+      class="w-4 h-4 stroke-background"
+    />
+    <IconCheck
+      v-if="icon === 'check'"
+      class="w-4 h-4 stroke-background"
+    />
+    <div
+      v-if="icon === 'arrow-right'"
+      class="arrow-animate"
+    >
+      <IconArrowRight class="w-4 h-4 stroke-background" />
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { IconArrowRight } from '@tabler/icons-vue';
+import { IconArrowRight, IconArrowUpRight, IconCheck, IconCopy } from '@tabler/icons-vue';
 import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { experiences, projects } from '../../data/data';
@@ -32,7 +45,8 @@ const y = ref(0);
 const targetX = ref(0);
 const targetY = ref(0);
 const targetElement = ref<HTMLElement | null>(null);
-const text = ref('View Details');
+const text = ref<string>('View Details');
+const icon = ref<string>('arrow-right');
 
 const updatePosition = (event: MouseEvent) => {
   targetX.value = event.clientX;
@@ -53,11 +67,12 @@ const hideFollower = () => {
   isVisible.value = false;
 };
 
-const changeLabel = (label: string) => {
+const changeContent = (label: string, symbol: string) => {
   text.value = label;
+  icon.value = symbol;
 };
 
-const tagTarget = (elementId: string, label: string, hideOnElementIds: string[] | undefined) => {
+const tagTarget = (elementId: string, label: string, icon: string, hideOnElementIds: string[] | undefined) => {
   const target = document.getElementById(elementId) as HTMLElement;
   const hideOnTargets = hideOnElementIds?.map(id => document.getElementById(id)).filter(el => el) as HTMLElement[] || [];
 
@@ -68,7 +83,7 @@ const tagTarget = (elementId: string, label: string, hideOnElementIds: string[] 
   target.addEventListener('mouseover', () => {
     if(!hideOnTargets.some(el => el.matches(':hover'))) {
       showFollower();
-      changeLabel(label);
+      changeContent(label, icon);
     }
   });
   hideOnTargets?.forEach(el => el.addEventListener('mouseover', hideFollower));
@@ -94,14 +109,19 @@ watch(
     setTimeout(() => {
       isVisible.value = false;
       experiences.forEach((experience) => {
-        tagTarget(experience.id, 'Job Details', undefined);
+        tagTarget(experience.id, 'Job Details', 'arrow-right', undefined);
       });
       projects.forEach((project) => {
         const hideOnElementIds = [`gallery-${project.id}`];
         project.links?.github ? hideOnElementIds.push(`source-code-${project.id}`) : undefined;
         project.links?.website ? hideOnElementIds.push(`website-${project.id}`) : undefined;
-        tagTarget(project.id, project.title + ' Details', hideOnElementIds);
+        tagTarget(project.id, project.title + ' Details', 'arrow-right', hideOnElementIds);
       });
+      tagTarget('email-link', 'Email', 'arrow-up-right', undefined);
+      tagTarget('github-link', 'Github', 'arrow-up-right', undefined);
+      tagTarget('linkedin-link', 'LinkedIn', 'arrow-up-right', undefined);
+      tagTarget('email-copy', 'Copy Address', 'copy', undefined);
+      tagTarget('email-copy-success', 'Copied', 'check', undefined);
     }, 400);
   },
   { immediate: true }

@@ -1,14 +1,17 @@
 <template>
   <div class="">
 
-    <div class="font-header text-2xl mb-8" :class="more ? 'flex justify-between items-center' : ''">
-      {{ title }}
+    <div class="mb-8" :class="more ? 'flex justify-between items-center' : ''">
+      <div class="font-header text-2xl transition-colors">
+        {{ title }}
+      </div>
       <RouterLink v-if="more" to="/projects">
         <ButtonUI
           label="More"
           :handle-click="() => {}"
           :small="true"
           :icon-right="true"
+          :alt-animation="true"
           class="text-sm"
         >
           <IconArrowRight class="w-4 h-4" />

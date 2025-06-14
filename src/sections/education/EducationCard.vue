@@ -5,7 +5,7 @@
       <div class="font-text text-sm text-secondary">
         {{ date }}
       </div>
-      <div class="font-title mt-1">
+      <div class="font-title mt-1 transition-colors">
         {{ institution }}
       </div>
     </div>

@@ -1,16 +1,5 @@
 <template>
-  <div class="relative">
-
-    <div class="absolute -right-4">
-      <ButtonUI
-        label="Back"
-        :handle-click="() => router.back()"
-        class="fixed"
-        :iconRight="true"
-      >
-        <IconX class="w-5 h-5" />
-      </ButtonUI>
-    </div>
+  <div class="flex flex-col gap-16">
 
     <Breadcrumb 
       :items="[
@@ -18,11 +7,9 @@
         { label: 'Projects', to: '/projects' },
         { label: project ? project.title : 'Not Found' }
       ]"
-      class="mb-16"
     />
-    
-    <div v-if="project" class="flex flex-col gap-16">
-  
+
+    <template v-if="project">
       <div>
         <div class="font-title text-3xl">
           {{ project.title }}
@@ -31,7 +18,7 @@
           {{ project.summary }}
         </div>
       </div>
-  
+
       <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
           <div class="text-secondary mb-1">Role</div>
@@ -47,7 +34,7 @@
         </div>
         <div>
           <div class="text-secondary mb-1">Links</div>
-          <div class="flex max-sm:flex-col sm:flex-wrap text-sm gap-2">
+          <div class="flex sm:flex-wrap text-sm gap-2">
             <ButtonUI
               :id="`source-code-${project.id}`"
               v-if="project.links?.github"
@@ -71,57 +58,51 @@
           </div>
         </div>
       </div>
-  
+
       <div class="font-text">
         <div class="flex flex-col gap-2">
-          <div v-for="(description, index) in project.description" :key="index" class="flex gap-2 p-2 rounded-lg bg-background-card border-[.1rem] border-border hover:bg-background-card-hover hover:border-border-hover group transition-all">
+          <div v-for="(description, index) in project.description" :key="index" class="flex gap-2 p-2 rounded-lg bg-background-card border-[.1rem] border-border sm:hover:bg-background-card-hover sm:hover:border-border-hover group transition-all">
             <div>
-              <IconCheck class="w-4 h-4 text-secondary group-hover:text-primary transition-all" />
+              <IconCheck class="w-4 h-4 text-secondary sm:group-hover:text-primary transition-all" />
             </div>
-            <div class="text-secondary group-hover:text-primary transition-all">{{ description }}</div>
+            <div class="text-secondary sm:group-hover:text-primary transition-all">{{ description }}</div>
           </div>
         </div>
       </div>
-  
-      <div 
-        :style="{ backgroundColor: project.color }"
-        class="rounded-lg flex flex-col gap-16 px-8 py-16"
-      >
+
+      <div>
         <div
-          v-for="(image, index) in project.images || []"
-          :key="index"
-          class="group px-8"
-          :class="[
-            // !image.phone && index === 0 ? 'pt-32' : '',
-            // !image.phone && index === (project.images?.length ?? 0) - 1 ? 'pb-32' : '',
-          ]"
+          :style="{ backgroundColor: project.color }"
+          class="aspect-square rounded-lg flex items-center justify-center p-6 relative"
         >
-          <img
-            :src="`/${project.id}/${image.src}`"
-            :alt="`${project.title} image ${index + 1}`"
-            class="rounded-lg w-full hover:scale-105 hover:shadow-lg transition-all duration-300"
+          <img 
+            :src="`/${project.id}/${project.images[0].src}`"
+            :alt="`${project.title} image`"
+            class="rounded-lg sm:hover:scale-105 sm:hover:shadow-lg duration-300"
+            :class="project.images[0].phone ? 'h-full' : 'w-full'"
           />
         </div>
       </div>
-  
-    </div>
-    <div v-else>
-      <div class="flex items-center justify-center">
-        <div class="text-secondary">Project not found</div>
+    
+    </template>
+
+    <template v-else>
+      <div class="text-secondary text-center">
+        Project not found.
       </div>
-    </div>
+    </template>
+
   </div>
 </template>
 
 <script setup lang="ts">
-import { useRoute, useRouter } from 'vue-router';
-import { IconCode, IconLink, IconCheck, IconX } from '@tabler/icons-vue';
+import { useRoute } from 'vue-router';
+import { IconCode, IconLink, IconCheck } from '@tabler/icons-vue';
 import Breadcrumb from '../components/ui/Breadcrumb.vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
 import { projects } from '../data/data';
 
 const route = useRoute();
-const router = useRouter();
 
 const project = projects.find(p => p.id === route.params.projectId);
 

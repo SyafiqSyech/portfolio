@@ -2,18 +2,18 @@
   <RouterLink
     :id="id"
     :to="`/projects/${id}`"
-    class="flex flex-col gap-4 border-[.1rem] border-border bg-background-card rounded-2xl p-4 group cursor-pointer hover:border-border-hover hover:bg-background-card-hover transition-all"
+    class="flex flex-col gap-4 border-[.1rem] border-border bg-background-card rounded-2xl p-4 group cursor-pointer sm:hover:border-border-hover sm:hover:bg-background-card-hover transition-all"
   >
 
     <div>
       <div
         :style="{ backgroundColor: color }"
-        class="aspect-square rounded-lg flex items-center justify-center p-3 relative"
+        class="aspect-square rounded-lg flex items-center justify-center p-6 relative"
       >
         <img 
           :src="`${id}/${image}`"
           :alt="`${title} thumbnail`"
-          class="rounded-lg group-hover:scale-105 group-hover:shadow-lg duration-300 group-odd:group-hover:rotate-4 group-even:group-hover:-rotate-4"
+          class="rounded-lg sm:group-hover:scale-105 sm:group-hover:shadow-lg duration-300"
           :class="phone ? 'h-full' : 'w-full'"
         />
       </div>
@@ -37,15 +37,6 @@
         class="sm:hidden"
       >
         <IconArrowRight class="w-4 h-4" />
-      </ButtonUI>
-      <ButtonUI
-        :id="`gallery-${id}`"
-        label='Gallery'
-        :handle-click="() => {}"
-        :small="true"
-        class="hidden sm:flex"
-      >
-        <IconPhoto class="w-4 h-4" />
       </ButtonUI>
       <ButtonUI
         :id="`source-code-${id}`"
@@ -75,7 +66,7 @@
 <script setup lang="ts">
 import ButtonUI from '../../components/ui/ButtonUI.vue';
 import { RouterLink } from 'vue-router';
-import { IconArrowRight, IconCode, IconLink, IconPhoto } from '@tabler/icons-vue';
+import { IconArrowRight, IconCode, IconLink } from '@tabler/icons-vue';
 
 interface Props {
   id: string;

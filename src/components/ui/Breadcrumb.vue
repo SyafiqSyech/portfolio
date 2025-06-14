@@ -3,7 +3,7 @@
     <template v-for="(item, index) in items.slice(0, -1)" :key="index">
       <RouterLink
         :to="item.to || '/notfound'"
-        class="hover:text-primary transition-colors"
+        class="sm:hover:text-primary transition-colors"
       >
         {{ item.label }}
       </RouterLink>

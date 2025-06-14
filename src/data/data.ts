@@ -112,9 +112,6 @@ export const projects: Project[] = [
     },
     images: [
       { src: "modmanager.png", phone: false },
-      { src: "modmanager1.png", phone: false },
-      { src: "modmanager2.png", phone: false },
-      { src: "modmanager3.png", phone: false },
     ],
     description: [
       "Developed a web-based manager for Minecraft mods using React TypeScript.",
@@ -135,11 +132,6 @@ export const projects: Project[] = [
     },
     images: [
       { src: "layzy.png", phone: false },
-      { src: "layzy1.png", phone: false },
-      { src: "layzy2.png", phone: false },
-      { src: "layzy3.png", phone: false },
-      { src: "layzy4.png", phone: false },
-      { src: "layzy5.png", phone: false },
     ],
     description: [
       "Led a team of three to develop a modular web section layout library for faster web development using React, deployed via Netlify, and collaborated using Git/GitHub.",
@@ -152,7 +144,7 @@ export const projects: Project[] = [
     title: "Portfolio Website",
     role: "Solo Developer",
     type: "Personal Project",
-    tech: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    tech: ["Vue", "Vue Router", "Typescript", "TailwindCSS", "Vite", "Netlify"],
     summary: "Personal website built using Vue to showcase projects, experience, and skills.",
     links: {
       github: "https://github.com/SyafiqSyech/portfolio",
@@ -166,14 +158,14 @@ export const projects: Project[] = [
       "Designed a minimalist UI with responsive animations and a togglable darkmode for improved UX.",
       "Deployed on Netlify with GitHub-integrated CI/CD pipeline for automated updates and version control.",
     ],
-    color: "#feac91",
+    color: "#ff916c",
   },
   {
     id: "charsheet",
     title: "Character Sheet (Ongoing)",
     role: "Solo Developer",
     type: "Personal Project",
-    tech: ["Vue", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    tech: ["Vue", "Quill.js", "Typescript", "Local Storage", "TailwindCSS", "Vite", "Netlify"],
     summary: "Virtual character sheet for tabletop RPGs, built with Vue.",
     links: {
       github: "https://github.com/SyafiqSyech/char-sheet",
@@ -183,7 +175,10 @@ export const projects: Project[] = [
       { src: "charsheet.png", phone: true },
     ],
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
+      "Developed a virtual character sheet for tabletop RPGs using Vue.js and Tailwind CSS, focusing on usability and clean UI.",
+      "Implemented customizable user settings, including font preferences and data saving options.",
+      "Integrated and customized Quill.js as a text editor for the notes section.",
+      "Currently working on adding autosave functionality, improving overall experience and other features.",
     ],
     color: "#7c7c7c",
   },
@@ -192,7 +187,7 @@ export const projects: Project[] = [
     title: "Portfolio Website (Old)",
     role: "Solo Developer",
     type: "Personal Project",
-    tech: ["React", "Typescript", "TailwindCSS", "Vite", "Netlify"],
+    tech: ["React", "Vite", "Typescript", "Framer Motion", "TailwindCSS", "Netlify"],
     summary: "Personal website built using React to showcase projects, experience, and skills.",
     links: {
       github: "https://github.com/SyafiqSyech/personal",
@@ -201,7 +196,9 @@ export const projects: Project[] = [
       { src: "oldportfolio.png", phone: false },
     ],
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
+      "Developed a responsive web application using React.js and Vite.",
+      "Designed a minimalist user interface enhanced with Framer Motion animations, focusing on techniques such as variants and spring physics",
+      "Applied component-based architecture, improving my proficiency in React props, component reuse, and state management.",
     ],
     color: "#ffe59e",
   },
@@ -210,7 +207,7 @@ export const projects: Project[] = [
     title: "Cognitive Test",
     role: "Solo Developer",
     type: "Personal Project",
-    tech: ["HTML", "CSS", "JavaScript", "Netlify", "Game Design"],
+    tech: ["HTML", "CSS", "JavaScript", "Local Storage", "Netlify", "Game Design"],
     summary: "Interactive cognitive test games with high score tracking.",
     links: {
       github: "https://github.com/SyafiqSyech/cognitive-test",
@@ -220,7 +217,8 @@ export const projects: Project[] = [
       { src: "cognitivetest.png", phone: false },
     ],
     description: [
-      "Developed and maintained web applications using React and TypeScript.",
+      "Designed and developed three browser-based cognitive skill games, implementing difficulty curves, custom visuals, and engaging interactive mechanics.",
+      "Applied high score tracking using local storage.",
     ],
     color: "#f27f7c",
   },

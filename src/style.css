@@ -18,7 +18,7 @@
   --color-border: rgba(225, 225, 225);
   --color-border-hover: rgba(215, 215, 215);
 
-  --color-accent: rgba(254, 172, 145);
+  --color-accent: rgba(255, 145, 100);
   --color-accent-light: rgba(254, 172, 145, .3);
 
   --font-weight-header: 400;
@@ -49,7 +49,7 @@
 }
 
 body {
-  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pt-16 sm:pt-32 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight;
+  @apply mx-auto flex min-h-screen max-w-xl flex-col px-4 pb-48 overflow-x-hidden bg-background text-primary font-family tracking-tight leading-tight;
 }
 
 ::selection {

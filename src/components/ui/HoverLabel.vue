@@ -3,8 +3,7 @@
     class="absolute w-max pointer-events-none border-[.1rem] border-border bg-background px-1.5 py-0.5 gap-1.5 text-sm font-label rounded-lg left-1/2 -translate-x-1/2 opacity-0 -top-4 transition-all z-50 flex items-center text-secondary select-none"
     :class="
       [
-        props.group ? 'group' :'group-hover:opacity-100 group-hover:blur-none',
-        props.group ? 'group' :'group-hover:-top-6',
+        props.group ? '' :'sm:group-hover:opacity-100 sm:group-hover:blur-none sm:group-hover:-top-6',
       ]
     "
   >

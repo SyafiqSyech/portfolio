@@ -1,9 +1,10 @@
 <template>
   <div
-    class="cursor-pointer border-[.1rem] font-label rounded-lg flex justify-center items-center gap-2 transition-all border-border bg-background-button hover:bg-background-button-hover hover:border-background-button-hover group-hover:border-border-hover group-hover:bg-background-button-cardhover group-hover:hover:bg-background-button-cardhover-hover group-hover:hover:border-background-button-cardhover-hover"
+    class="cursor-pointer border-[.1rem] font-label rounded-lg flex justify-center items-center gap-2 transition-all border-border bg-background-button sm:hover:bg-background-button-hover sm:hover:border-background-button-hover sm:group-hover:border-border-hover sm:group-hover:bg-background-button-cardhover sm:group-hover:hover:bg-background-button-cardhover-hover sm:group-hover:hover:border-background-button-cardhover-hover"
     :class="[
-      iconRight ? 'flex-row-reverse hover:gap-4' : 'flex-row hover:px-4',
-      small ? 'px-3 py-1.5' : 'px-6 py-3 hover:px-8'
+      iconRight ? 'flex-row-reverse' : 'flex-row',
+      small ? 'px-3 py-1.5' : 'px-6 py-3 sm:hover:px-8',
+      altAnimation ? 'sm:hover:gap-4' : 'sm:hover:px-4',
     ]"
     @click="handleClick"
   >
@@ -29,6 +30,10 @@ defineProps({
     default: false
   },
   iconRight: {
+    type: Boolean,
+    default: false
+  },
+  altAnimation: {
     type: Boolean,
     default: false
   }
