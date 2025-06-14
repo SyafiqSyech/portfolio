@@ -3,7 +3,7 @@
 
     <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
       
-      <div class="w-24 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300" style="background-image: url('Profile.png');"></div>
+      <div class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300" style="background-image: url('Profile.png');"></div>
       
       <div class="absolute z-10 -top-24 sm:hover:px-44 opacity-0 sm:group-hover:-top-18 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">
         <IconCrown class="w-16 h-16 stroke-accent" />
