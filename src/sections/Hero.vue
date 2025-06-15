@@ -3,7 +3,7 @@
 
     <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
       
-      <div class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300" style="background-image: url('Profile.png');"></div>
+      <div class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300" style="background-image: url('profile.webp');"></div>
       
       <div class="absolute z-10 -top-24 sm:hover:px-44 opacity-0 sm:group-hover:-top-18 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">
         <IconCrown class="w-16 h-16 stroke-accent" />
@@ -38,7 +38,6 @@
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('mailto:syafiq.syech@gmail.com', false)"
       >
-        <!-- <HoverLabel label="Email" :external="true" /> -->
         <IconMail
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -49,7 +48,6 @@
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('https://github.com/SyafiqSyech', true)"
       >
-        <!-- <HoverLabel label="Github" :external="true" /> -->
         <IconBrandGithub
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -60,7 +58,6 @@
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
         @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)"
       >
-        <!-- <HoverLabel label="Linkedin" :external="true" /> -->
         <IconBrandLinkedin
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />

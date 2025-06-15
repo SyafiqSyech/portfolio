@@ -111,7 +111,7 @@ export const projects: Project[] = [
       website: "https://modrinthmanager.netlify.app/",
     },
     images: [
-      { src: "modmanager.png", phone: false },
+      { src: "modmanager.webp", phone: false },
     ],
     description: [
       "Developed a web-based manager for Minecraft mods using React TypeScript.",
@@ -131,7 +131,7 @@ export const projects: Project[] = [
       github: "https://github.com/JeRiJeMaRiCo6203/ComponentWireframeLibrary",
     },
     images: [
-      { src: "layzy.png", phone: false },
+      { src: "layzy.webp", phone: false },
     ],
     description: [
       "Led a team of three to develop a modular web section layout library for faster web development using React, deployed via Netlify, and collaborated using Git/GitHub.",
@@ -151,7 +151,7 @@ export const projects: Project[] = [
       website: "https://abdullahsyafiq.netlify.app/",
     },
     images: [
-      { src: "portfolio.png", phone: true },
+      { src: "portfolio.webp", phone: true },
     ],
     description: [
       "Built a responsive personal portfolio website using Vue.js and Tailwind CSS to showcase projects, professional experience, and resume.",
@@ -172,7 +172,7 @@ export const projects: Project[] = [
       website: "https://bonekeeper.netlify.app/",
     },
     images: [
-      { src: "charsheet.png", phone: true },
+      { src: "charsheet.webp", phone: true },
     ],
     description: [
       "Developed a virtual character sheet for tabletop RPGs using Vue.js and Tailwind CSS, focusing on usability and clean UI.",
@@ -193,7 +193,7 @@ export const projects: Project[] = [
       github: "https://github.com/SyafiqSyech/personal",
     },
     images: [
-      { src: "oldportfolio.png", phone: false },
+      { src: "oldportfolio.webp", phone: false },
     ],
     description: [
       "Developed a responsive web application using React.js and Vite.",
@@ -214,7 +214,7 @@ export const projects: Project[] = [
       website: "https://sherbetlemon.netlify.app/",
     },
     images: [
-      { src: "cognitivetest.png", phone: false },
+      { src: "cognitivetest.webp", phone: false },
     ],
     description: [
       "Designed and developed three browser-based cognitive skill games, implementing difficulty curves, custom visuals, and engaging interactive mechanics.",

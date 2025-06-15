@@ -33,7 +33,7 @@
           :class="onPage === 'home' ? '' : 'hidden'"
         >
         </div>
-        <!-- <HoverLabel label="Home" /> -->
+        <HoverLabel label="Home" />
         <IconHome
           class="sm:group-hover:stroke-primary transition-all"
           :class="onPage === 'home' ? 'stroke-primary' : 'stroke-secondary'"
@@ -50,7 +50,7 @@
           :class="onPage === 'projects' ? '' : 'hidden'"
         >
         </div>
-        <!-- <HoverLabel label="Projects" /> -->
+        <HoverLabel label="Projects" />
         <IconFolders
           class="sm:group-hover:stroke-primary transition-all"
           :class="onPage === 'projects' ? 'stroke-primary' : 'stroke-secondary'"
@@ -64,7 +64,7 @@
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
         @click="openPage('mailto:syafiq.syech@gmail.com', false)"
       >
-        <!-- <HoverLabel label="Email" :external="true" /> -->
+        <HoverLabel label="Email" :external="true" />
         <IconMail
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -75,7 +75,7 @@
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
         @click="openPage('https://github.com/SyafiqSyech', true)"
       >
-        <!-- <HoverLabel label="Github" :external="true" /> -->
+        <HoverLabel label="Github" :external="true" />
         <IconBrandGithub
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -86,7 +86,7 @@
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
         @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)"
       >
-        <!-- <HoverLabel label="Linkedin" :external="true" /> -->
+        <HoverLabel label="Linkedin" :external="true" />
         <IconBrandLinkedin
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -99,7 +99,7 @@
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
         @click="changeTheme"
       >
-        <!-- <HoverLabel :label="currentTheme === 'dark' ? 'Dark' : 'Light'" /> -->
+        <HoverLabel :label="currentTheme === 'dark' ? 'Dark' : 'Light'" />
         <IconSunHigh v-if="currentTheme === 'light'"
           class="stroke-secondary sm:group-hover:stroke-primary transition-all"
         />
@@ -116,6 +116,7 @@
 import { onMounted, ref, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
 import { IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh, IconMoon, IconArrowLeft } from '@tabler/icons-vue';
+import HoverLabel from './HoverLabel.vue';
 import ButtonUI from './ButtonUI.vue';
 
 const route = useRoute();

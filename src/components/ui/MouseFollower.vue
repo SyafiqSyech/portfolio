@@ -1,10 +1,7 @@
 <template>
   <div
-    class="fixed pointer-events-none select-none bg-primary px-2 py-1 gap-1.5 text-sm font-medium rounded-lg rounded-bl-none flex items-center text-background z-[9999] transition-[opacity,background-color,color]"
-    :class="{
-      'opacity-100': isVisible,
-      'opacity-0': !isVisible,
-    }"
+    class="fixed pointer-events-none select-none bg-primary text-background px-2 py-1 gap-1.5 text-sm font-label rounded-lg rounded-bl-none flex items-center z-50 transition-[opacity,background-color,color]"
+    :class="isVisible ? 'opacity-100' : 'opacity-0'"
     :style="{
       left: `${x+8}px`,
       top: `${y-28}px`
@@ -122,12 +119,12 @@ watch(
       tagTarget('linkedin-link', 'LinkedIn', 'arrow-up-right', undefined);
       tagTarget('email-copy', 'Copy Address', 'copy', undefined);
       tagTarget('email-copy-success', 'Copied', 'check', undefined);
-      tagTarget('home-link', 'Home', 'none', undefined);
-      tagTarget('projects-link', 'Projects', 'none', undefined);
-      tagTarget('email-navbar-link', 'Email', 'arrow-up-right', undefined);
-      tagTarget('github-navbar-link', 'Github', 'arrow-up-right', undefined);
-      tagTarget('linkedin-navbar-link', 'LinkedIn', 'arrow-up-right', undefined);
-      tagTarget('theme-toggle', 'Change Theme', 'none', undefined);
+      // tagTarget('home-link', 'Home', 'none', undefined);
+      // tagTarget('projects-link', 'Projects', 'none', undefined);
+      // tagTarget('email-navbar-link', 'Email', 'arrow-up-right', undefined);
+      // tagTarget('github-navbar-link', 'Github', 'arrow-up-right', undefined);
+      // tagTarget('linkedin-navbar-link', 'LinkedIn', 'arrow-up-right', undefined);
+      // tagTarget('theme-toggle', 'Change Theme', 'none', undefined);
     }, 400);
   },
   { immediate: true }
