@@ -2,14 +2,14 @@
   <div>
 
     <div class="flex flex-col sm:flex-row-reverse sm:items-center justify-between">
-      <div class="font-text text-sm text-secondary">
+      <div class="font-text text-sm text-secondary transition-colors">
         {{ date }}
       </div>
       <div class="font-title mt-1 transition-colors">
         {{ institution }}
       </div>
     </div>
-    <div class="font-text text-secondary mt-1">
+    <div class="font-text text-secondary transition-colors mt-1">
       {{ degree }}
     </div>
     

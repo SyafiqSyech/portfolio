@@ -6,7 +6,7 @@
   >
 
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
-      <p class="font-text text-secondary text-sm">
+      <p class="font-text text-secondary transition-colors text-sm">
         {{ date }}
       </p>
       <h2 class="font-title max-sm:mt-4">
@@ -14,7 +14,7 @@
       </h2>
     </div>
 
-    <p class="font-text text-secondary mt-1">
+    <p class="font-text text-secondary transition-colors mt-1">
       {{ role }}
     </p>
     

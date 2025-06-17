@@ -11,22 +11,22 @@
     
     <template v-if="experience">
         
-      <h1 class="font-title text-3xl">
+      <h1 class="font-title text-3xl transition-colors">
         {{ experience?.company }}
       </h1>
 
       <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
-          <h2 class="text-secondary mb-1">Position</h2>
-          <p class="text-primary">{{ experience?.role }}</p>
+          <h2 class="text-secondary transition-colors mb-1">Position</h2>
+          <p class="text-primary transition-colors">{{ experience?.role }}</p>
         </div>
         <div>
-          <h2 class="text-secondary mb-1">Duration</h2>
-          <p class="text-primary">{{ experience?.date }}</p>
+          <h2 class="text-secondary transition-colors mb-1">Duration</h2>
+          <p class="text-primary transition-colors">{{ experience?.date }}</p>
         </div>
         <div>
-          <h2 class="text-secondary mb-1">Location</h2>
-          <p class="text-primary">{{ experience?.location }}</p>
+          <h2 class="text-secondary transition-colors mb-1">Location</h2>
+          <p class="text-primary transition-colors">{{ experience?.location }}</p>
         </div>
       </div>
 
@@ -44,7 +44,7 @@
     </template>
 
     <template v-else>
-      <div class="text-secondary text-center">
+      <div class="text-secondary text-center transition-colors">
         Experience not found.
       </div>
     </template>
@@ -54,7 +54,7 @@
 
 <script setup lang="ts">
 import { useRoute } from 'vue-router';
-import { experiences } from '../data/data';
+import { experiences } from '../data/experiences';
 import Breadcrumb from '../components/ui/Breadcrumb.vue';
 import { IconCheck } from '@tabler/icons-vue';
 

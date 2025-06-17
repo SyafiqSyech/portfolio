@@ -1,9 +1,9 @@
 <template>
   <Section title="Education">
     <EducationCard
-      :institution="education.institution"
-      :degree="education.degree"
-      :date="education.date"
+      :institution="educations.institution"
+      :degree="educations.degree"
+      :date="educations.date"
     />
   </Section>
 </template>
@@ -11,5 +11,5 @@
 <script setup lang="ts">
 import Section from '../../components/layout/Section.vue';
 import EducationCard from './EducationCard.vue';
-import { education } from '../../data/data';
+import { educations } from '../../data/educations';
 </script>

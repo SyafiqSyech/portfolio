@@ -29,7 +29,7 @@
 
 [data-theme="dark"] {
   --color-primary: rgba(255, 255, 255);
-  --color-secondary: rgba(135, 135, 135);
+  --color-secondary: rgba(155, 155, 155);
   --color-background: rgba(30, 30, 30);
   --color-background-card: rgba(35, 35, 35);
   --color-background-card-hover: rgba(40, 40, 40);

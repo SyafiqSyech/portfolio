@@ -20,7 +20,7 @@
       <div class="w-2 aspect-square rounded-full bg-accent">
         <div class="w-2 aspect-square rounded-full bg-accent animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
       </div>
-      <div class="text-secondary">South Jakarta, Indonesia</div>
+      <div class="text-secondary transition-colors">South Jakarta, Indonesia</div>
     </div>
 
     <nav class="flex items-center">
@@ -65,7 +65,7 @@
 
     </nav>
 
-    <div class="text-secondary text-center text-sm leading-relaxed relative">
+    <div class="text-secondary transition-colors text-center text-sm leading-relaxed relative">
       <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
       Email me at
       <span

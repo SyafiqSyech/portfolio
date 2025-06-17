@@ -38,5 +38,5 @@ import { RouterLink } from 'vue-router';
 import Breadcrumb from '../components/ui/Breadcrumb.vue';
 import ProjectCard from '../sections/projects/ProjectCard.vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
-import { projects } from '../data/data';
+import { projects } from '../data/projects';
 </script>

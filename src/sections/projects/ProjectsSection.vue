@@ -31,6 +31,6 @@
 <script setup lang="ts">
 import Section from '../../components/layout/Section.vue';
 import ProjectCard from './ProjectCard.vue';
-import { projects } from '../../data/data';
+import { projects } from '../../data/projects';
 import ButtonUI from '../../components/ui/ButtonUI.vue';
 </script>

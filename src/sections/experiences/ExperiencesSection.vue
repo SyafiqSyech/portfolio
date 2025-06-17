@@ -16,5 +16,5 @@
 <script setup lang="ts">
 import Section from '../../components/layout/Section.vue';
 import ExperienceCard from './ExperienceCard.vue';
-import { experiences } from '../../data/data';
+import { experiences } from '../../data/experiences';
 </script>

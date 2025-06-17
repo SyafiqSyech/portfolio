@@ -35,5 +35,5 @@ import { RouterLink } from 'vue-router';
 import Breadcrumb from '../components/ui/Breadcrumb.vue';
 import ExperienceCard from '../sections/experiences/ExperienceCard.vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
-import { experiences } from '../data/data';
+import { experiences } from '../data/experiences';
 </script>

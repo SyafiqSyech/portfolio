@@ -33,7 +33,8 @@
 import { IconArrowRight, IconArrowUpRight, IconCheck, IconCopy } from '@tabler/icons-vue';
 import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { useRoute } from 'vue-router';
-import { experiences, projects } from '../../data/data';
+import { experiences } from '../../data/experiences';
+import { projects } from '../../data/projects';
 
 const route = useRoute();
 const isVisible = ref(false);
