@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center gap-4">
+  <header class="flex flex-col items-center gap-4">
 
     <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
       
@@ -23,7 +23,7 @@
       <div class="text-secondary">South Jakarta, Indonesia</div>
     </div>
 
-    <div class="flex items-center">
+    <nav class="flex items-center">
 
       <ButtonUI
         label="Resume"
@@ -63,7 +63,7 @@
         />
       </div>
 
-    </div>
+    </nav>
 
     <div class="text-secondary text-center text-sm leading-relaxed relative">
       <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
@@ -83,7 +83,7 @@
       </span>
     </div>
 
-  </div>
+  </header>
 </template>
 
 <script setup lang="ts">

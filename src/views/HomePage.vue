@@ -3,7 +3,7 @@
     
     <Hero />
 
-    <Experience />
+    <Experiences />
 
     <Projects />
     
@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import Education from '../sections/education/EducationSection.vue';
-import Experience from '../sections/experiences/ExperiencesSection.vue';
+import Experiences from '../sections/experiences/ExperiencesSection.vue';
 import Hero from '../sections/Hero.vue';
 import Projects from '../sections/projects/ProjectsSection.vue';
 import Skills from '../sections/skills/SkillsSection.vue';

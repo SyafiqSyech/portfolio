@@ -2,9 +2,9 @@
   <div class="">
 
     <div class="mb-8" :class="more ? 'flex justify-between items-center' : ''">
-      <div class="font-header text-2xl transition-colors">
+      <h1 class="font-header text-2xl transition-colors">
         {{ title }}
-      </div>
+      </h1>
       <RouterLink v-if="more" to="/projects">
         <ButtonUI
           label="More"

@@ -12,7 +12,7 @@
       >
         <img 
           :src="`${id}/${image}`"
-          :alt="`${title} thumbnail`"
+          :alt="`${title} - ${summary} | Abdullah Syafiq's Portfolio Project`"
           class="rounded-lg sm:group-hover:scale-105 sm:group-hover:shadow-lg duration-300"
           :class="phone ? 'h-full' : 'w-full'"
         />
@@ -20,18 +20,17 @@
     </div>
 
     <div>
-      <div class="font-title mb-1 transition-all">
+      <h2 class="font-title mb-1 transition-all">
         {{ title }}
-      </div>
-      <div class="font-text text-secondary">
+      </h2>
+      <p class="font-text text-secondary">
         {{ summary }}
-      </div>
+      </p>
     </div>
 
     <div class="sm:flex sm:flex-wrap text-sm gap-2">
       <ButtonUI
         label='View Details'
-        :handle-click="() => {}"
         :small="true"
         :icon-right="true"
         class="sm:hidden"

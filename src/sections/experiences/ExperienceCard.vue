@@ -1,27 +1,26 @@
 <template>
   <RouterLink 
     :id="id"
-    :to="`/${id}`"
+    :to="`/experiences/${id}`"
     class="border-[.1rem] border-border bg-background-card rounded-xl p-4 cursor-pointer sm:hover:border-border-hover sm:hover:bg-background-card-hover transition-all group"
   >
 
     <div class="sm:flex sm:flex-row-reverse justify-between items-center">
-      <div class="font-text text-secondary text-sm">
+      <p class="font-text text-secondary text-sm">
         {{ date }}
-      </div>
-      <div class="font-title max-sm:mt-4">
+      </p>
+      <h2 class="font-title max-sm:mt-4">
         {{ company }}
-      </div>
+      </h2>
     </div>
 
-    <div class="font-text text-secondary mt-1">
+    <p class="font-text text-secondary mt-1">
       {{ role }}
-    </div>
+    </p>
     
     <div class="sm:hidden text-sm mt-4">
       <ButtonUI
         label="View Details"
-        :handle-click="() => {}"
         :small="true"
         :iconRight="true"
       >

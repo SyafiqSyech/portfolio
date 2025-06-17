@@ -4,28 +4,29 @@
     <Breadcrumb 
       :items="[
         { label: 'Home', to: '/' },
-        { label: experience?.company }
+        { label: 'Experiences', to: '/experiences' },
+        { label: experience ? experience.company : 'Experience Not Found' }
       ]"
     />
     
     <template v-if="experience">
         
-      <div class="font-title text-3xl">
+      <h1 class="font-title text-3xl">
         {{ experience?.company }}
-      </div>
+      </h1>
 
       <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
-          <div class="text-secondary mb-1">Position</div>
-          <div class="text-primary">{{ experience?.role }}</div>
+          <h2 class="text-secondary mb-1">Position</h2>
+          <p class="text-primary">{{ experience?.role }}</p>
         </div>
         <div>
-          <div class="text-secondary mb-1">Duration</div>
-          <div class="text-primary">{{ experience?.date }}</div>
+          <h2 class="text-secondary mb-1">Duration</h2>
+          <p class="text-primary">{{ experience?.date }}</p>
         </div>
         <div>
-          <div class="text-secondary mb-1">Location</div>
-          <div class="text-primary">{{ experience?.location }}</div>
+          <h2 class="text-secondary mb-1">Location</h2>
+          <p class="text-primary">{{ experience?.location }}</p>
         </div>
       </div>
 
@@ -35,7 +36,7 @@
             <div>
               <IconCheck class="w-4 h-4 text-secondary sm:group-hover:text-primary transition-all" />
             </div>
-            <div class="text-secondary sm:group-hover:text-primary transition-all">{{ description }}</div>
+            <p class="text-secondary sm:group-hover:text-primary transition-all">{{ description }}</p>
           </div>
         </div>
       </div>
