@@ -1,10 +1,19 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Inter';
+  src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('truetype');
+  font-weight: 400 500;
+  font-style: normal;
+  font-display: swap;
+}
+
 @custom-variant dark (&:where([data-theme=dark], data-theme=dark *));
 
 @theme {
   --color-primary: rgba(0, 0, 0);
-  --color-secondary: rgba(135, 135, 135);
+  --color-secondary: rgba(110, 110, 110);
+  --color-icon-secondary: rgba(135, 135, 135);
   --color-background: rgba(255, 255, 255);
   --color-background-card: rgba(245, 245, 245);
   --color-background-card-hover: rgba(235, 235, 235);
@@ -30,6 +39,7 @@
 [data-theme="dark"] {
   --color-primary: rgba(255, 255, 255);
   --color-secondary: rgba(155, 155, 155);
+  --color-icon-secondary: rgba(135, 135, 135);
   --color-background: rgba(30, 30, 30);
   --color-background-card: rgba(35, 35, 35);
   --color-background-card-hover: rgba(40, 40, 40);

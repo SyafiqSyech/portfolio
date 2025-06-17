@@ -36,7 +36,7 @@
         <HoverLabel label="Home" />
         <IconHome
           class="sm:group-hover:stroke-primary transition-all"
-          :class="onPage === 'home' ? 'stroke-primary' : 'stroke-secondary'"
+          :class="onPage === 'home' ? 'stroke-primary' : 'stroke-icon-secondary'"
         />
       </RouterLink>
 
@@ -53,7 +53,7 @@
         <HoverLabel label="Projects" />
         <IconFolders
           class="sm:group-hover:stroke-primary transition-all"
-          :class="onPage === 'projects' ? 'stroke-primary' : 'stroke-secondary'"
+          :class="onPage === 'projects' ? 'stroke-primary' : 'stroke-icon-secondary'"
         />
       </RouterLink>
 
@@ -66,7 +66,7 @@
       >
         <HoverLabel label="Email" :external="true" />
         <IconMail
-          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
+          class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 
@@ -77,7 +77,7 @@
       >
         <HoverLabel label="Github" :external="true" />
         <IconBrandGithub
-          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
+          class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 
@@ -88,7 +88,7 @@
       >
         <HoverLabel label="Linkedin" :external="true" />
         <IconBrandLinkedin
-          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
+          class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 
@@ -101,10 +101,10 @@
       >
         <HoverLabel :label="currentTheme === 'dark' ? 'Dark' : 'Light'" />
         <IconSunHigh v-if="currentTheme === 'light'"
-          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
+          class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
         <IconMoon v-else
-          class="stroke-secondary sm:group-hover:stroke-primary transition-all"
+          class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
       </div>
 

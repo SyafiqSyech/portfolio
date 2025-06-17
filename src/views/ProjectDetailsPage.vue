@@ -77,7 +77,7 @@
           class="aspect-square rounded-lg flex items-center justify-center p-6 relative"
         >
           <img 
-            :src="`/${project.id}/${project.images[0].src}`"
+            :src="`/images/${project.id}/${project.images[0].src}`"
             :alt="`${project.title} - ${project.summary} | Abdullah Syafiq's Portfolio Project`"
             class="rounded-lg sm:hover:scale-105 sm:hover:shadow-lg duration-300"
             :class="project.images[0].phone ? 'h-full' : 'w-full'"
