@@ -3,8 +3,12 @@
 
     <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
 
-      <img class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-48 transition-all duration-300"
-        src="/images/profile.webp" alt="Abdullah Syafiq's Profile Picture"/>
+      <img
+        src="/images/profile.webp"
+        alt="Abdullah Syafiq's Profile Picture"
+        loading="lazy"
+        class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-48 transition-all duration-300"
+      />
 
       <div
         class="absolute z-10 -top-24 sm:hover:px-44 opacity-0 sm:group-hover:-top-18 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">

@@ -79,6 +79,7 @@
           <img 
             :src="`/images/${project.id}/${project.images[0].src}`"
             :alt="`${project.title} - ${project.summary} | Abdullah Syafiq's Portfolio Project`"
+            loading="lazy"
             class="rounded-lg sm:hover:scale-105 sm:hover:shadow-lg duration-300"
             :class="project.images[0].phone ? 'h-full' : 'w-full'"
           />
