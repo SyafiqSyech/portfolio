@@ -161,7 +161,7 @@ const openPage = (url: string, onBlank: boolean) => {
 
 const showBackButton = ref(false);
 watch(() => route.name, (newPage) => {
-  showBackButton.value = newPage !== 'home' && newPage !== 'projects';
+  showBackButton.value = newPage !== 'home' && newPage !== 'projects' && newPage !== 'experiences';
 });
 </script>
 
