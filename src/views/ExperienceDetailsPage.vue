@@ -17,15 +17,15 @@
 
       <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Position</h2>
+          <h2 class="text-secondary mb-1">Position</h2>
           <p class="text-primary transition-colors">{{ experience?.role }}</p>
         </div>
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Duration</h2>
+          <h2 class="text-secondary mb-1">Duration</h2>
           <p class="text-primary transition-colors">{{ experience?.date }}</p>
         </div>
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Location</h2>
+          <h2 class="text-secondary mb-1">Location</h2>
           <p class="text-primary transition-colors">{{ experience?.location }}</p>
         </div>
       </div>

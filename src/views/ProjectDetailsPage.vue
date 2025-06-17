@@ -15,26 +15,26 @@
         <h1 class="font-title text-3xl transition-colors">
           {{ project.title }}
         </h1>
-        <p class="font-text text-secondary transition-colors mt-4">
+        <p class="font-text text-secondary mt-4">
           {{ project.summary }}
         </p>
       </div>
 
       <div class="grid sm:grid-cols-2 gap-4 font-text">
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Role</h2>
+          <h2 class="text-secondary mb-1">Role</h2>
           <p class="text-primary transition-colors">{{ project.role }}</p>
         </div>
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Type</h2>
+          <h2 class="text-secondary mb-1">Type</h2>
           <p class="text-primary transition-colors">{{ project.type }}</p>
         </div>
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Tech</h2>
+          <h2 class="text-secondary mb-1">Tech</h2>
           <p class="text-primary transition-colors">{{ project.tech.join(', ') }}</p>
         </div>
         <div>
-          <h2 class="text-secondary transition-colors mb-1">Links</h2>
+          <h2 class="text-secondary mb-1">Links</h2>
           <div class="flex sm:flex-wrap text-sm gap-2">
             <ButtonUI
               :id="`source-code-${project.id}`"

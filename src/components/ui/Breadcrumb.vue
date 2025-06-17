@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center gap-2 text-sm text-secondary transition-colors">
+  <nav class="flex items-center gap-2 text-sm text-secondary">
     <template v-for="(item, index) in items.slice(0, -1)" :key="index">
       <RouterLink
         :to="item.to || '/notfound'"

@@ -3,9 +3,8 @@
 
     <div class="flex justify-center group relative sm:hover:mb-12 transition-all duration-300">
 
-      <div
-        class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-40 transition-all duration-300"
-        style="background-image: url('images/profile.webp');"></div>
+      <img class="w-32 aspect-square rounded-full relative z-10 bg-cover left-0 sm:group-hover:w-48 transition-all duration-300"
+        src="/images/profile.webp" alt="Abdullah Syafiq's Profile Picture"/>
 
       <div
         class="absolute z-10 -top-24 sm:hover:px-44 opacity-0 sm:group-hover:-top-18 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">
@@ -14,7 +13,7 @@
 
     </div>
 
-    <div class="text-center transition-colors">
+    <div class="text-center">
       <div class="font-title">Abdullah Syafiq</div>
       <div class="font-header text-2xl">Software Engineer</div>
     </div>
@@ -23,7 +22,7 @@
       <div class="w-2 aspect-square rounded-full bg-accent">
         <div class="w-2 aspect-square rounded-full bg-accent animate-[ping_2s_cubic-bezier(0,0,0.2,1)_infinite]"></div>
       </div>
-      <div class="text-secondary transition-colors">South Jakarta, Indonesia</div>
+      <div class="text-secondary">South Jakarta, Indonesia</div>
     </div>
 
     <nav class="flex items-center">
@@ -52,7 +51,7 @@
 
     </nav>
 
-    <div class="text-secondary transition-colors text-center text-sm leading-relaxed relative">
+    <div class="text-secondary text-center text-sm leading-relaxed relative">
       <!-- Hello! I'm <span class="text-primary transition-all">Syafiq</span>, I am writing about myself to fill this section. <br /> -->
       Email me at
       <span class="cursor-pointer sm:hover:underline sm:hover:underline-offset-1 relative">

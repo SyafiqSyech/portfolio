@@ -23,7 +23,7 @@
       <h2 class="font-title mb-1 transition-all">
         {{ title }}
       </h2>
-      <p class="font-text text-secondary transition-colors">
+      <p class="font-text text-secondary">
         {{ summary }}
       </p>
     </div>

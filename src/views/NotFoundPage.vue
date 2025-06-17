@@ -9,7 +9,7 @@
     <div class="flex flex-col items-center gap-8 mt-16">
       <h1 class="text-4xl font-title">404</h1>
       
-      <p class="text-secondary text-center transition-colors">
+      <p class="text-secondary text-center">
         Welp, it seems like the page doesn't exist.
       </p>
 

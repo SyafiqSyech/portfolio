@@ -1,5 +1,5 @@
 <template>
-  <div id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-center pointer-events-none transition-colors">
+  <div id="navbar" class="fixed top-0 left-0 w-full z-40 flex items-center justify-center pointer-events-none">
     
     <Transition name="back" mode="out-in">
       <div
