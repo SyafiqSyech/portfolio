@@ -6,6 +6,8 @@
   font-weight: 400 500;
   font-style: normal;
   font-display: swap;
+  font-feature-settings: 'kern';
+  text-rendering: optimizeLegibility;
 }
 
 @custom-variant dark (&:where([data-theme=dark], data-theme=dark *));

@@ -10,6 +10,7 @@
         loading="eager" 
         width="128"
         height="128"
+        decoding="async"
         class="rounded-full relative z-10 bg-cover left-0 sm:group-hover:scale-150 transition-all duration-300"
       />
 

@@ -46,15 +46,27 @@ const targetElement = ref<HTMLElement | null>(null);
 const text = ref<string>('View Details');
 const icon = ref<string>('arrow-right');
 
+let animationFrame: number | null = null;
+
 const updatePosition = (event: MouseEvent) => {
   targetX.value = event.clientX;
   targetY.value = event.clientY;
+  
+  if (!animationFrame) {
+    animationFrame = requestAnimationFrame(animatePosition);
+  }
 };
 
-const smoothUpdate = () => {
-  x.value += (targetX.value - x.value) * 0.1; 
-  y.value += (targetY.value - y.value) * 0.1;
-  requestAnimationFrame(smoothUpdate);
+const animatePosition = () => {
+  const easing = 0.15;
+  x.value += (targetX.value - x.value) * easing;
+  y.value += (targetY.value - y.value) * easing;
+  
+  if (Math.abs(targetX.value - x.value) > 0.1 || Math.abs(targetY.value - y.value) > 0.1) {
+    animationFrame = requestAnimationFrame(animatePosition);
+  } else {
+    animationFrame = null;
+  }
 };
 
 const showFollower = () => {
@@ -98,7 +110,6 @@ onUnmounted(() => {
 
 onMounted(() => {
   document.addEventListener('mousemove', updatePosition);
-  smoothUpdate();
 });
 
 watch(

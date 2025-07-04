@@ -117,22 +117,22 @@
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref, watch } from 'vue';
-import { useRoute, useRouter } from 'vue-router';
-import { IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh, IconMoon, IconArrowLeft } from '@tabler/icons-vue';
+import { IconArrowLeft, IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh } from '@tabler/icons-vue';
 import HoverLabel from './HoverLabel.vue';
 import ButtonUI from './ButtonUI.vue';
+import { onMounted, ref, watch } from 'vue';
+import { useRoute, useRouter } from 'vue-router';
 
 const route = useRoute();
 const router = useRouter();
-
-const onPage = ref(route.name);
-
-watch(() => route.name, (newPage) => {
-  onPage.value = newPage;
-});
+const onPage = ref('home');
+const currentTheme = ref('light');
 
 onMounted(() => {
+  currentTheme.value = document.documentElement.getAttribute('data-theme') || 'light';
+  
+  updateCurrentPage();
+
   const navbar = document.getElementById('navbar');
   if (navbar) {
     navbar.style.height = `${window.innerHeight}px`;
@@ -145,7 +145,21 @@ onMounted(() => {
   });
 });
 
-const currentTheme = ref(localStorage.getItem('theme') || 'light');
+const updateCurrentPage = () => {
+  const routeName = route.name as string;
+  
+  if (routeName && routeName.includes('project')) {
+    onPage.value = 'projects';
+  } else if (routeName && routeName.includes('experience')) {
+    onPage.value = 'experiences';
+  } else {
+    onPage.value = routeName || 'home';
+  }
+};
+
+watch(() => route.name, () => {
+  updateCurrentPage();
+});
 
 const changeTheme = () => {
   const theme = localStorage.getItem('theme');

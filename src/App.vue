@@ -17,22 +17,13 @@
 
 <script setup lang="ts">
 import Navbar from './components/ui/Navbar.vue';
-import MouseFollower from './components/ui/MouseFollower.vue';
+import { defineAsyncComponent } from 'vue';
 import { onMounted, ref, onUnmounted } from 'vue';
 
-onMounted(() => {
-  setTimeout(() => {
-    document.body.style.transition = 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)';
-  }, 100);
-
-  const theme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', theme);
-  localStorage.setItem('theme', theme);
+const MouseFollower = defineAsyncComponent({
+  loader: () => import('./components/ui/MouseFollower.vue'),
+  delay: 200
 });
-
-const scrollToTop = () => {
-  window.scrollTo({ top: 0 });
-};
 
 const mobile = ref(false);
 
@@ -40,12 +31,21 @@ const checkMobile = () => {
   mobile.value = window.innerWidth < 640;
 };
 
+const scrollToTop = () => {
+  window.scrollTo({ top: 0 });
+};
+
 onMounted(() => {
+  const theme = localStorage.getItem('theme') || 'light';
+  document.documentElement.setAttribute('data-theme', theme);
+  localStorage.setItem('theme', theme);
+
   checkMobile();
   window.addEventListener('resize', checkMobile);
   
-  const savedTheme = localStorage.getItem('theme') || 'light';
-  document.documentElement.setAttribute('data-theme', savedTheme);
+  requestAnimationFrame(() => {
+    document.body.style.transition = 'background-color 150ms cubic-bezier(0.4, 0, 0.2, 1)';
+  });
 });
 
 onUnmounted(() => {

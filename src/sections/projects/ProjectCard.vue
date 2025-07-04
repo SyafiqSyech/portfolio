@@ -14,6 +14,8 @@
           :src="`images/${id}/${image}`"
           :alt="`${title} - ${summary} | Abdullah Syafiq's Portfolio Project`"
           loading="lazy"
+          decoding="async"
+          height="400"
           class="rounded-lg sm:group-hover:scale-105 sm:group-hover:shadow-lg duration-300"
           :class="phone ? 'h-full' : 'w-full'"
         />

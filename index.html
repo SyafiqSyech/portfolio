@@ -6,17 +6,39 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <link rel="preload" href="/images/profile.webp" as="image" fetchpriority="high">
+  <link rel="preload" href="/fonts/Inter-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+
+  <link rel="dns-prefetch" href="https://github.com">
+  <link rel="dns-prefetch" href="https://linkedin.com">
+  
   <title>Abdullah Syafiq</title>
   <meta name="description" content="Portfolio of Abdullah Syafiq, Software Engineer with expertise in frontend development, React, Vue, and Angular.">
   <meta name="keywords" content="Frontend Developer, Software Engineer, Vue, React, Angular, Portfolio, Abdullah Syafiq, Syafiq">
   <meta name="author" content="Abdullah Syafiq">
+  
+  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e1e1e">
 </head>
 
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
+  
+  <script>
+    const lcpObserver = new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      if (entries.length > 0) {
+        const lcp = entries[0];
+        console.log('LCP:', lcp.startTime / 1000, 'seconds');
+      }
+    });
+    lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+  </script>
 </body>
 
 </html>
