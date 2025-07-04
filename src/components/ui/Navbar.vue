@@ -113,7 +113,7 @@
 </template>
 
 <script setup lang="ts">
-import { IconArrowLeft, IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh } from '@tabler/icons-vue';
+import { IconArrowLeft, IconBrandGithub, IconBrandLinkedin, IconFolders, IconHome, IconMail, IconSunHigh, IconMoon } from '@tabler/icons-vue';
 import HoverLabel from './HoverLabel.vue';
 import ButtonUI from './ButtonUI.vue';
 import { onMounted, ref, watch } from 'vue';
