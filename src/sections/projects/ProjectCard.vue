@@ -38,26 +38,38 @@
       >
         <IconArrowRight class="w-4 h-4" />
       </ButtonUI>
-      <ButtonUI
-        :id="`source-code-${id}`"
+      <a
         v-if="links?.github"
-        label='Source Code'
-        :handle-click="() => openLink(links?.github)"
-        :small="true"
-        class="hidden sm:flex"
+        :href="links?.github"
+        target="_blank"
+        rel="noopener noreferrer"
+        @click.stop
       >
-        <IconCode class="w-4 h-4" />
-      </ButtonUI>
-      <ButtonUI
-        :id="`website-${id}`"
+        <ButtonUI
+          :id="`source-code-${id}`"
+          label='Source Code'
+          :small="true"
+          class="hidden sm:flex"
+        >
+          <IconCode class="w-4 h-4" />
+        </ButtonUI>
+      </a>
+      <a
         v-if="links?.website"
-        label='Website'
-        :handle-click="() => openLink(links?.website)"
-        :small="true"
-        class="hidden sm:flex"
+        :href="links?.website"
+        target="_blank"
+        rel="noopener noreferrer"
+        @click.stop
       >
-        <IconLink class="w-4 h-4" />
-      </ButtonUI>
+        <ButtonUI
+          :id="`website-${id}`"
+          label='Website'
+          :small="true"
+          class="hidden sm:flex"
+        >
+          <IconLink class="w-4 h-4" />
+        </ButtonUI>
+      </a>
     </div>
 
   </RouterLink>
@@ -82,9 +94,4 @@ interface Props {
 }
 
 defineProps<Props>();
-
-const openLink = (url: string | undefined) => {
-  if (!url) return;
-  window.open(url, '_blank');
-};
 </script>

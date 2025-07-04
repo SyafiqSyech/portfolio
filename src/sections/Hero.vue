@@ -34,27 +34,40 @@
 
     <nav class="flex items-center">
 
-      <ButtonUI label="Resume" :handle-click="openPdf" class="mr-2">
-        <IconFileDescription />
-      </ButtonUI>
+      <a
+        href="/CV.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <ButtonUI label="Resume" class="mr-2">
+          <IconFileDescription />
+        </ButtonUI>
+      </a>
 
-      <div id="email-link"
+      <a id="email-link"
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
-        @click="openPage('mailto:syafiq.syech@gmail.com', false)">
+        href="mailto:syafiq.syech@gmail.com"
+      >
         <IconMail class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all" />
-      </div>
+      </a>
 
-      <div id="github-link"
+      <a id="github-link"
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
-        @click="openPage('https://github.com/SyafiqSyech', true)">
+        href="https://github.com/SyafiqSyech"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <IconBrandGithub class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all" />
-      </div>
+      </a>
 
-      <div id="linkedin-link"
+      <a id="linkedin-link"
         class="py-3 px-4 sm:hover:px-6 sm:hover:bg-background-icon-hover rounded-lg group relative cursor-pointer transition-all"
-        @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)">
+        href="https://www.linkedin.com/in/abdullahsyafiq/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <IconBrandLinkedin class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all" />
-      </div>
+      </a>
 
     </nav>
 
@@ -75,19 +88,6 @@
 <script setup lang="ts">
 import { IconBrandGithub, IconBrandLinkedin, IconCrown, IconFileDescription, IconMail } from '@tabler/icons-vue';
 import ButtonUI from '../components/ui/ButtonUI.vue';
-
-const openPage = (url: string, onBlank: boolean) => {
-  if (onBlank) {
-    window.open(url, '_blank');
-  } else {
-    window.location.href = url;
-  }
-};
-
-const openPdf = () => {
-  const pdfUrl = '/CV.pdf';
-  window.open(pdfUrl, '_blank');
-};
 
 const copyEmail = () => {
   const email = 'syafiq.syech@gmail.com';
