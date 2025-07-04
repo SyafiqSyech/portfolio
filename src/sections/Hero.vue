@@ -1,7 +1,7 @@
 <template>
   <header class="flex flex-col items-center gap-4">
 
-    <div class="flex justify-center group relative sm:hover:mb-18 transition-all duration-300">
+    <div class="flex justify-center group relative sm:hover:mb-18 sm:transition-all duration-300">
 
       <img
         src="/images/profile.webp"
@@ -11,11 +11,11 @@
         width="128"
         height="128"
         decoding="async"
-        class="rounded-full relative z-10 bg-cover left-0 sm:group-hover:scale-150 transition-all duration-300"
+        class="rounded-full relative z-10 bg-cover left-0 sm:group-hover:scale-150 sm:transition-all duration-300"
       />
 
       <div
-        class="absolute z-10 -top-32 sm:hover:px-44 opacity-0 sm:group-hover:-top-24 sm:group-hover:opacity-100 transition-all duration-300 pointer-events-none hidden sm:block">
+        class="absolute z-10 -top-32 sm:hover:px-44 opacity-0 sm:group-hover:-top-24 sm:group-hover:opacity-100 sm:transition-all duration-300 pointer-events-none hidden sm:block">
         <IconCrown class="w-16 h-16 stroke-accent" />
       </div>
 
