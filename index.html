@@ -17,11 +17,25 @@
   <meta name="description" content="Portfolio of Abdullah Syafiq, Software Engineer with expertise in frontend development, React, Vue, and Angular.">
   <meta name="keywords" content="Frontend Developer, Software Engineer, Vue, React, Angular, Portfolio, Abdullah Syafiq, Syafiq">
   <meta name="author" content="Abdullah Syafiq">
+  
+  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e1e1e">
 </head>
 
 <body>
   <div id="app"></div>
   <script type="module" src="/src/main.ts"></script>
+  
+  <script>
+    const lcpObserver = new PerformanceObserver((entryList) => {
+      const entries = entryList.getEntries();
+      if (entries.length > 0) {
+        const lcp = entries[0];
+        console.log('LCP:', lcp.startTime / 1000, 'seconds');
+      }
+    });
+    lcpObserver.observe({ type: 'largest-contentful-paint', buffered: true });
+  </script>
 </body>
 
 </html>
