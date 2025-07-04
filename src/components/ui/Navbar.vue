@@ -59,42 +59,38 @@
 
       <div class="w-[.1rem] mx-2 h-8 bg-border rounded-full transition-all"></div>
 
-      <a
+      <div
         id="email-navbar-link"
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
-        href="mailto:syafiq.syech@gmail.com"
+        @click="openPage('mailto:syafiq.syech@gmail.com', false)"
       >
         <HoverLabel label="Email" :external="true" />
         <IconMail
           class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
-      </a>
+      </div>
 
-      <a
+      <div
         id="github-navbar-link"
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
-        href="https://github.com/SyafiqSyech"
-        target="_blank"
-        rel="noopener noreferrer"
+        @click="openPage('https://github.com/SyafiqSyech', true)"
       >
         <HoverLabel label="Github" :external="true" />
         <IconBrandGithub
           class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
-      </a>
+      </div>
 
-      <a
+      <div
         id="linkedin-navbar-link"
         class="flex justify-center items-center rounded-lg sm:hover:bg-background-icon-hover py-2 px-4 sm:py-2 sm:sm:hover:px-6 group relative cursor-pointer transition-all"
-        href="https://www.linkedin.com/in/abdullahsyafiq/"
-        target="_blank"
-        rel="noopener noreferrer"
+        @click="openPage('https://www.linkedin.com/in/abdullahsyafiq/', true)"
       >
         <HoverLabel label="Linkedin" :external="true" />
         <IconBrandLinkedin
           class="stroke-icon-secondary sm:group-hover:stroke-primary transition-all"
         />
-      </a>
+      </div>
 
       <div class="w-[.1rem] mx-2 h-8 bg-border rounded-full transition-all"></div>
       
@@ -167,6 +163,14 @@ const changeTheme = () => {
   document.documentElement.setAttribute('data-theme', newTheme);
   localStorage.setItem('theme', newTheme);
   currentTheme.value = newTheme;
+};
+
+const openPage = (url: string, onBlank: boolean) => {
+  if (onBlank) {
+    window.open(url, '_blank', 'noopener,noreferrer');
+  } else {
+    window.location.href = url;
+  }
 };
 
 const showBackButton = ref(false);

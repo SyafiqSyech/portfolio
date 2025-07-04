@@ -36,36 +36,26 @@
         <div>
           <h2 class="text-secondary mb-1">Links</h2>
           <div class="flex sm:flex-wrap text-sm gap-2">
-            <a
+            <ButtonUI
+              :id="`source-code-${project.id}`"
               v-if="project.links?.github"
-              :href="project.links.github"
-              target="_blank"
-              rel="noopener noreferrer"
+              label='Source Code'
+              :handle-click="() => openLink(project?.links?.github)"
+              :small="true"
+              class="sm:flex"
             >
-              <ButtonUI
-                :id="`source-code-${project.id}`"
-                label='Source Code'
-                :small="true"
-                class="sm:flex"
-              >
-                <IconCode class="w-4 h-4" />
-              </ButtonUI>
-            </a>
-            <a
+              <IconCode class="w-4 h-4" />
+            </ButtonUI>
+            <ButtonUI
+              :id="`website-${project.id}`"
               v-if="project.links?.website"
-              :href="project.links.website"
-              target="_blank"
-              rel="noopener noreferrer"
+              label='Website'
+              :handle-click="() => openLink(project?.links?.website)"
+              :small="true"
+              class="sm:flex"
             >
-              <ButtonUI
-                :id="`website-${project.id}`"
-                label='Website'
-                :small="true"
-                class="sm:flex"
-              >
-                <IconLink class="w-4 h-4" />
-              </ButtonUI>
-            </a>
+              <IconLink class="w-4 h-4" />
+            </ButtonUI>
           </div>
         </div>
       </div>
@@ -116,4 +106,10 @@ import { projects } from '../data/projects';
 
 const route = useRoute();
 const project = projects.find(p => p.id === route.params.projectId);
+
+const openLink = (url: string | undefined) => {
+  if (url) {
+    window.open(url, '_blank');
+  }
+};
 </script>

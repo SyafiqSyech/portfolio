@@ -14,8 +14,6 @@
           :src="`images/${id}/${image}`"
           :alt="`${title} - ${summary} | Abdullah Syafiq's Portfolio Project`"
           loading="lazy"
-          decoding="async"
-          height="400"
           class="rounded-lg sm:group-hover:scale-105 sm:group-hover:shadow-lg duration-300"
           :class="phone ? 'h-full' : 'w-full'"
         />
@@ -40,38 +38,26 @@
       >
         <IconArrowRight class="w-4 h-4" />
       </ButtonUI>
-      <a
+      <ButtonUI
+        :id="`source-code-${id}`"
         v-if="links?.github"
-        :href="links?.github"
-        target="_blank"
-        rel="noopener noreferrer"
-        @click.stop
+        label='Source Code'
+        :handle-click="() => openLink(links?.github)"
+        :small="true"
+        class="hidden sm:flex"
       >
-        <ButtonUI
-          :id="`source-code-${id}`"
-          label='Source Code'
-          :small="true"
-          class="hidden sm:flex"
-        >
-          <IconCode class="w-4 h-4" />
-        </ButtonUI>
-      </a>
-      <a
+        <IconCode class="w-4 h-4" />
+      </ButtonUI>
+      <ButtonUI
+        :id="`website-${id}`"
         v-if="links?.website"
-        :href="links?.website"
-        target="_blank"
-        rel="noopener noreferrer"
-        @click.stop
+        label='Website'
+        :handle-click="() => openLink(links?.website)"
+        :small="true"
+        class="hidden sm:flex"
       >
-        <ButtonUI
-          :id="`website-${id}`"
-          label='Website'
-          :small="true"
-          class="hidden sm:flex"
-        >
-          <IconLink class="w-4 h-4" />
-        </ButtonUI>
-      </a>
+        <IconLink class="w-4 h-4" />
+      </ButtonUI>
     </div>
 
   </RouterLink>
@@ -96,4 +82,9 @@ interface Props {
 }
 
 defineProps<Props>();
+
+const openLink = (url: string | undefined) => {
+  if (!url) return;
+  window.open(url, '_blank');
+};
 </script>
