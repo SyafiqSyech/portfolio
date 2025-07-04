@@ -20,7 +20,7 @@ const routes = [
 		name: 'home',
 		component: HomePage,
 		meta: { 
-			title: 'Abdullah Syafiq - Software Engineer'
+			title: 'Abdullah Syafiq'
 		}
 	},
 	{
@@ -28,7 +28,7 @@ const routes = [
 		name: 'projects',
 		component: ProjectsPage,
 		meta: { 
-			title: 'Projects - Abdullah Syafiq'
+			title: 'Projects | Abdullah Syafiq'
 		}
 	},
 	{
@@ -36,7 +36,7 @@ const routes = [
 		name: 'project-details',
 		component: ProjectDetailsPage,
 		meta: { 
-			title: 'Project Details - Abdullah Syafiq'
+			title: 'Project Details | Abdullah Syafiq'
 		}
 	},
 	{
@@ -44,7 +44,7 @@ const routes = [
 		name: 'experiences',
 		component: ExperiencesPage,
 		meta: { 
-			title: 'Experiences - Abdullah Syafiq'
+			title: 'Experiences | Abdullah Syafiq'
 		}
 	},
 	{
@@ -52,7 +52,7 @@ const routes = [
 		name: 'experience-details',
 		component: ExperienceDetailsPage,
 		meta: { 
-			title: 'Experience Details - Abdullah Syafiq'
+			title: 'Experience Details | Abdullah Syafiq'
 		}
 	},
 	{
@@ -60,7 +60,7 @@ const routes = [
 		name: 'not-found',
 		component: NotFoundPage,
 		meta: { 
-			title: 'Page Not Found - Abdullah Syafiq'
+			title: 'Page Not Found | Abdullah Syafiq'
 		}
 	}
 ]
